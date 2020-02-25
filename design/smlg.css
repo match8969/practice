@@ -152,3 +152,16 @@ a {
     width: 100%;
     flex-basis: calc(100%/6*2);
 }
+
+
+/* Brand */
+.brand-container {
+    background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
+    min-height: 500px;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+}
+
