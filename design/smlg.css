@@ -17,8 +17,7 @@ a {
     justify-content: space-between;
     border-bottom: 1px solid #dddddd;
     height: 100px;
-
-    padding: 10px 20% 10px 20%;
+    padding: 10px 10% 10px 10%;
 }
 
 
@@ -51,7 +50,7 @@ a {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #dddddd;
-    padding: 10px 20% 10px 20%;
+    padding: 10px 10% 10px 10%;
     background-color: #cccccc;
     /* max-height: calc(100vh - 100px); */
     max-height: 300px;
@@ -129,26 +128,23 @@ a {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #dddddd;
-    padding: 10px 20% 10px 20%;
+    padding: 10px 10% 10px 10%;
 }
 
 .category-container {
     border: 1px solid #000000;
-    /* background-color: red; */
     width: 100%;
     flex-basis: calc(100%/6*1);
 }
 
 .feature-container {
     border: 1px solid #000000;
-    /* background-color: green; */
     width: 100%;
     flex-basis: calc(100%/6*3);
 }
 
 .new-article-container {
     border: 1px solid #000000;
-    /* background-color: blue; */
     width: 100%;
     flex-basis: calc(100%/6*2);
 }
@@ -164,6 +160,7 @@ a {
 .footer-container {
     display: flex;
     flex-direction: column;
+    padding: 10px 10% 10px 10%;
 }
 
 .footer-content {
@@ -174,6 +171,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-basis: 33%;
+    padding: 5%;
 }
 
 .footer-icon-sns-list {
@@ -198,6 +196,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-basis: 33%;
+    padding: 5%;
 }
 
 .footer-company-content {
