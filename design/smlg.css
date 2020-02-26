@@ -163,5 +163,69 @@ a {
 /* Footer */
 .footer-container {
     display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-icon-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+}
+
+.footer-icon-sns-list {
+    display: flex;
+    width: 100%;
+}
+
+.footer-icon-sns-item {
+    width: 33%;
+}
+
+.footer-category-list {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.footer-category-item {
+    width: 50%;
+}
+
+.footer-category-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+}
+
+.footer-company-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+}
+
+.footer-company-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-company-item {
+    width: 50%;
+}
+
+.footer-copyrignt {
+    /* TODO : コピーライトは右下に。 */
+}
+
+.footer-user-env {
+    border: 1px solid #000000;
+    position: fixed; /* 右下に固定 */
+    bottom: 10%;
+    right: 10%;
+    width: 10%;
+    height: 10%;
+    background-color: #ffffff;
 }
 
