@@ -367,6 +367,27 @@ a {
     background-repeat: no-repeat;
     background-size: 100%;
     min-height: 500px;
+    color: #ffffff;
+    padding: 5% 30%;
+}
+
+.brand-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.brand-concept {
+    font-size: 2rem; 
+}
+
+.brand-title {
+    font-size: 4rem; 
+}
+
+.brand-description {
+    line-height: 2.5rem;
 }
 
 /* Footer */
@@ -473,9 +494,9 @@ a {
     background-color: #ffffff;
     display: flex;
     /* text-align: center; */
-    justify-content: center; /* 水平方向の中央 */
+    justify-content: center; /* 垂直方向の中央 */
 }
 
 .footer-user-env-content {
-    align-self: center; /* 垂直方向の中央 */
+    align-self: center; /* 水平方向の中央 */
 }
