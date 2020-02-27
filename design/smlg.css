@@ -5,6 +5,21 @@
     header,article,section,footer,main,nav,aside{display: block;
 }
 
+
+html {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    /* font-size: 62.5%; */
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
 /* === 共通化 === */
 
 
@@ -30,7 +45,6 @@
     display: flex;
     justify-content: flex-end;
     height: 10%;
-
 }
 
 /* デフォルトに設定する慣習などある?? */
@@ -44,7 +58,7 @@ a {
 .header-container {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #dddddd;
+    /* border-bottom: 1px solid #dddddd; */
     height: 100px;
     padding: 10px 10% 10px 10%;
 }
@@ -66,6 +80,25 @@ a {
 
 .header-search {
     order: 1;
+    display: flex;
+    width: 20%;
+    
+    position: relative;
+}
+
+.header-search-box {
+    background-color: #f0f0f0;
+    height: 50%;
+    width: 100%;
+    align-self: center;
+    border: none;
+}
+
+.header-search-button {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    border: none;
 }
 
 .nav-list {
@@ -83,17 +116,17 @@ a {
 
 .top-container {
     display: flex;
-    border-bottom: 1px solid #dddddd;
-    padding: 10px 10% 10px 10%;
-    background-color: #cccccc;
+    /* border-bottom: 1px solid #dddddd; */
+    padding: 20px 10%;
+    background-color: #eeeeee;
     justify-content: space-around;
-    /* height: auto; */ /* best 現状 */
     height: 400px; /* NG */
+    height: 500px; /* NG */
 }
 
 .top-content {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-basis: calc(100%/3*2);
     position: relative;
@@ -101,8 +134,10 @@ a {
 
 .top-content-article {
     width: 100%;
+    height: 100%;
     background-image: url("https://smartlog-stat2.imgix.net/uploads/content/piece/2018/3/bc355a78fe3a2dd864287c90ac09882f/main_%E4%BD%99%E8%A8%88%E3%81%AA%E3%81%8A%E7%AF%80%E4%BB%8B%E3%82%92%E3%81%84%E3%81%86%E5%BD%BC%E6%B0%8F.jpg?w=700&auto=compress&q=35");
     background-repeat: no-repeat;
+    background-size: 100%;
     display: flex;
     justify-content: center;
 }
@@ -110,27 +145,28 @@ a {
 .top-content-title{
     color: #ffffff;
     position: absolute;
+    width: 100%;
     bottom: 10%;
+    padding: 0 5%;
 }
 
 .top-recommend {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     flex-basis: calc(100%/3*1);
-    text-align: center;
     height: 100%;
-    padding: 0 10px;
     width: 100%;
-    /* height: 100%; */
+    padding: 0 2%;
 }
 
 .top-recommend-title {
     height: 20%; /* 上部20%で レコメンドのヘッダーを収めたい */
+    text-align: center;
 }
 
 .top-recommend-list{
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     display: flex;
     flex-direction: column;
     height: 80%; /* 下部80%で レコメンドの記事のリストを収めたい */
@@ -140,7 +176,7 @@ a {
     display: flex;
     width: 100%;
     height: 100px; /* 全て 100px 固定*/
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 .top-recommend-article-item {
@@ -152,8 +188,20 @@ a {
 }
 
 .top-recommend-article-info {
+    display: flex;
+    flex-direction: column;
     order: 2;
     flex-basis: calc(100%/5*4);
+    padding: 0 20px;
+    height: 100%;
+}
+
+.top-recommend-article-title {
+    height: 70%;
+}
+
+.top-recommend-article-author {
+    color: red;
 }
 
 .top-recommend-article-thumbnail {
@@ -169,12 +217,12 @@ a {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #dddddd;
-    padding: 10px 10% 10px 10%;
+    padding: 30px 10% 10px 10%;
     max-height: 1000px; /* 最大の大きさ */
 }
 
 .category-container {
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     width: 100%;
     flex-basis: calc(100%/6*1);
 }
@@ -193,10 +241,12 @@ a {
 
 /* FEATURE */
 .feature-container {
-    border: 1px solid #000000;
+    /* border-right: 1px solid #000000; */
+    border-right: 1px solid #cccccc;
     width: 100%;
     height: 100%;
     flex-basis: calc(100%/6*3);
+    padding: 0 20px;
 }
 
 .feature-container-title {
@@ -205,7 +255,7 @@ a {
 }
 
 .feature-list {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     height: 80%; 
@@ -215,12 +265,13 @@ a {
     display: flex;
     width: 100%;
     height: 100px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .feature-article-item {
     display: flex;
-    border-bottom: 1px solid #000000;
+    /* border-bottom: 1px solid #000000; */
+    border-bottom: 1px solid #cccccc;
     width: 100%;
     height: 100%;
     padding: 10px 0;
@@ -229,7 +280,24 @@ a {
 .feature-article-info {
     order: 2;
     flex-basis: calc(100%/5*4);
+    display: flex;
+    flex-direction: column;
 }
+
+.feature-article-title {
+    order: 1;
+}
+
+.feature-article-author {
+    order: 3;
+    align-self: flex-end;
+}
+
+.feature-article-description {
+    order: 2;
+    color: #cccccc;
+}
+
 
 .feature-article-thumbnail {
     display: flex;
@@ -243,9 +311,10 @@ a {
 
 /* NEW ARTICLE */
 .new-article-container {
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     width: 100%;
     flex-basis: calc(100%/6*2);
+    padding: 0 2%;
 }
 
 .new-article-container-title{
@@ -254,7 +323,7 @@ a {
 }
 
 .new-list {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
     flex-direction: column;
     max-height: 80%;
@@ -271,7 +340,7 @@ a {
 
 .new-article-item {
     display: flex;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #cccccc;
     width: 100%;
     height: 100%;
     padding: 10px 0;
@@ -281,7 +350,7 @@ a {
 .new-article-info {
     order: 2;
     flex-basis: calc(100%/5*4);
-
+    padding: 0 20px;
 }
 
 .new-article-thumbnail {
@@ -295,6 +364,8 @@ a {
 /* Brand */
 .brand-container {
     background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     min-height: 500px;
 }
 
@@ -371,5 +442,11 @@ a {
     width: 10%;
     height: 10%;
     background-color: #ffffff;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center; /* 水平方向の中央 */
 }
 
+.footer-user-env-content {
+    align-self: center; /* 垂直方向の中央 */
+}
