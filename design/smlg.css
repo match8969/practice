@@ -197,7 +197,7 @@ a {
 }
 
 .top-recommend-article-title {
-    height: 70%;
+    height: 80%;
 }
 
 .top-recommend-article-author {
@@ -286,16 +286,19 @@ a {
 
 .feature-article-title {
     order: 1;
+    height: 50%;
 }
 
 .feature-article-author {
     order: 3;
     align-self: flex-end;
+    height: 25%;
 }
 
 .feature-article-description {
     order: 2;
     color: #cccccc;
+    height: 25%;
 }
 
 
@@ -351,6 +354,16 @@ a {
     order: 2;
     flex-basis: calc(100%/5*4);
     padding: 0 20px;
+}
+
+.new-article-title {
+    height: 80%;
+}
+
+.new-article-author {
+    height: 20%;
+    /* color: #cccccc; */
+    color: #777777;
 }
 
 .new-article-thumbnail {
