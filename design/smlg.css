@@ -5,6 +5,33 @@
     header,article,section,footer,main,nav,aside{display: block;
 }
 
+/* === 共通化 === */
+
+/* 記事の写真と新規の画像 */
+.article-thumbnail-image {
+    /* 固定 */
+    width: 80px;
+    height: 80px;
+}
+
+.article-new-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    width: 50%;
+    height: 50%;
+}
+
+/* 一覧ページ遷移 */
+.next-page {
+    display: flex;
+    justify-content: flex-end;
+    height: 10%;
+
+}
+
 /* デフォルトに設定する慣習などある?? */
 a {
     text-decoration: none;
@@ -18,7 +45,6 @@ a {
     height: 100px;
     padding: 10px 10% 10px 10%;
 }
-
 
 .header-title {
     order: 2;
@@ -86,7 +112,7 @@ a {
     height: 100%;
     padding: 0 10px;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .top-recommend-title {
@@ -103,7 +129,8 @@ a {
 .top-recommend-item{
     display: flex;
     width: 100%;
-    height: 30%; /* 3記事固定として、 縦は30% */
+    height: 100px; /* 全て 100px 固定*/
+    border: 1px solid purple;
 }
 
 .top-recommend-article-item {
@@ -119,33 +146,11 @@ a {
     flex-basis: calc(100%/5*4);
 }
 
-/* ここは一旦共通化 */
 .top-recommend-article-thumbnail {
     display: flex;
     order: 1;
     position: relative;
     flex-basis: calc(100%/5*1);
-}
-
-.article-thumbnail-image {
-    /* 画像は親要素に対して100%にする */
-    width: 100%;
-    height: 100%;
-}
-
-.article-new-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    width: 50%;
-    height: 50%;
-}
-
-.top-recommend-osusume {
-    display: flex;
-    justify-content: flex-end;
 }
 
 /* メインコンテンツ */
@@ -155,6 +160,7 @@ a {
     justify-content: space-between;
     border-bottom: 1px solid #dddddd;
     padding: 10px 10% 10px 10%;
+    max-height: 1000px; /* 最大の大きさ */
 }
 
 .category-container {
@@ -163,16 +169,57 @@ a {
     flex-basis: calc(100%/6*1);
 }
 
+/* FEATURE */
 .feature-container {
     border: 1px solid #000000;
     width: 100%;
+    height: 100%;
     flex-basis: calc(100%/6*3);
 }
 
 .feature-container-title {
     text-align: center;
+    height: 10%;
 }
 
+.feature-list {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    height: 80%; 
+}
+
+.feature-item {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border: 1px solid yellow;
+}
+
+.feature-article-item {
+    display: flex;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
+
+.feature-article-info {
+    order: 2;
+    flex-basis: calc(100%/5*4);
+}
+
+.feature-article-thumbnail {
+    display: flex;
+    order: 1;
+    position: relative;
+    flex-basis: calc(100%/5*1);
+    width: 100%;
+    height: auto;
+    
+}
+
+/* NEW ARTICLE */
 .new-article-container {
     border: 1px solid #000000;
     width: 100%;
@@ -181,6 +228,45 @@ a {
 
 .new-article-container-title{
     text-align: center;
+    height: 10%;
+}
+
+.new-list {
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    max-height: 80%;
+}
+
+.new-item {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    /* max-height: cal(100%/10*1); */
+    max-height: 100px;
+    /* max-height: 30%; */
+}
+
+.new-article-item {
+    display: flex;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+
+}
+
+.new-article-info {
+    order: 2;
+    flex-basis: calc(100%/5*4);
+
+}
+
+.new-article-thumbnail {
+    display: flex;
+    order: 1;
+    position: relative;
+    flex-basis: calc(100%/5*1);
 }
 
 
@@ -237,6 +323,7 @@ a {
     display: flex;
     flex-direction: column;
     flex-basis: 33%;
+    padding: 5%;
 }
 
 .footer-company-list {
@@ -250,13 +337,15 @@ a {
 
 .footer-copyrignt {
     /* TODO : コピーライトは右下に。 */
+    align-self: flex-end;
+
 }
 
 .footer-user-env {
     border: 1px solid #000000;
     position: fixed; /* 右下に固定 */
-    bottom: 10%;
-    right: 10%;
+    bottom: 5%;
+    right: 5%;
     width: 10%;
     height: 10%;
     background-color: #ffffff;
