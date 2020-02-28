@@ -1,0 +1,80 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box; outline: none;}
+    li{list-style: none;}
+    img,iframe{border: 0;}
+    header,article,section,footer,main,nav,aside{display: block;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    /* font-size: 62.5%; */
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 10px;
+}
+
+
+.card-list::after {
+    content:"";
+    display:block;
+    /* width: 30%; */
+    width: calc(33.3% - 7px);
+    height:0;
+}
+
+.card-item {
+    /* width: 30%; */
+    /* width: calc(33.3% - 7px); */
+    width: calc(33.3% - 13px);
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dddddd;
+    margin: 10px 0;
+}
+
+.card-title {
+    order: 2;
+    padding: 5px;
+}
+
+.card-description {
+    order: 3;
+    padding: 5px;
+}
+
+.card-image {
+    order: 1;
+    background-color: #dddddd;
+    height: 200px;
+    width: 100%;
+    border: none;
+}
+
+/* メディアクエリ */
+
+/* tablet */
+@media screen and (max-width: 959px) {
+    .card-item {
+        /* width: 45%; */
+        width: calc(50% - 10px);
+    }
+}
+
+/* smartphone */
+@media screen and (max-width: 559px) {
+    .card-list {
+        display: block;
+    }
+    .card-item {
+        width: 100%;
+    }
+
+
+}
