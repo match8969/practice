@@ -13,6 +13,7 @@ html {
 
 body {
     background-color: #cccccc;
+    padding: 30px;
 }
 
 .content-list {
@@ -23,6 +24,9 @@ body {
 .content-item {
     display: flex;
     margin: 10px;
+    
+    /* これで子要素 absoluteするのNG. flexbox崩壊*/
+    /* position: relative; */ 
 }
 
 
@@ -39,7 +43,7 @@ body {
     width: 100%;
     background-color: #ffffff;
     padding: 20px;
-    
+    margin: 20px;
 }
 
 .text-header {
