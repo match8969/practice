@@ -1,0 +1,59 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box; outline: none;}
+    li{list-style: none;}
+    img,iframe{border: 0;}
+    header,article,section,footer,main,nav,aside{display: block;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    /* font-size: 62.5%; */
+}
+
+body {
+    background-color: #cccccc;
+}
+
+.content-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-item {
+    display: flex;
+    margin: 10px;
+}
+
+
+/* 奇数番のみ画像を右側に */
+.content-item:nth-child(2n-1) > .text-content {
+    order: 2;
+}
+.content-item:nth-child(2n-1) > .image-content {
+    order: 1;
+}
+
+
+.text-content {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    
+}
+
+.text-header {
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.text-description {
+    padding: 20px;
+}
+
+
+.image-content {
+    width: 100%;
+    background-color: #111111;
+    padding: 20px;
+}
