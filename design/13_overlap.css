@@ -23,7 +23,7 @@ body {
 
 .content-item {
     display: flex;
-    margin: 10px;
+    margin: 20px;
     /* margin: 10px 10px 10px -30px; */
     
     /* これで子要素 absoluteするのNG. flexbox崩壊*/
@@ -35,15 +35,14 @@ body {
 .content-item:nth-child(2n-1) > .text-content {
     order: 2;
     /* 重ねあわせのため */
-    margin: 20px 20px 20px -50px; /* OK, */
+    margin: 20px 0px 20px -50px; /* OK, */
 }
 
 .content-item:nth-child(2n) > .text-content {
     /* 重ねあわせのため */
-    margin: 20px -50px 20px 20px;
+    margin: 20px -50px 20px 0;
     z-index: 1; /* textのブロックを最も前面にするため */
 }
-
 
 .content-item:nth-child(2n-1) > .image-content {
     order: 1;
