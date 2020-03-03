@@ -24,6 +24,7 @@ body {
 .content-item {
     display: flex;
     margin: 10px;
+    /* margin: 10px 10px 10px -30px; */
     
     /* これで子要素 absoluteするのNG. flexbox崩壊*/
     /* position: relative; */ 
@@ -33,7 +34,16 @@ body {
 /* 奇数番のみ画像を右側に */
 .content-item:nth-child(2n-1) > .text-content {
     order: 2;
+    /* 重ねあわせのため */
+    margin: 20px 20px 20px -50px; /* OK, */
 }
+
+.content-item:nth-child(2n) > .text-content {
+    /* 重ねあわせのため */
+    margin: 20px -50px 20px 20px; /* TODO: orderが2の方が前面になる。 */
+}
+
+
 .content-item:nth-child(2n-1) > .image-content {
     order: 1;
 }
@@ -43,7 +53,6 @@ body {
     width: 100%;
     background-color: #ffffff;
     padding: 20px;
-    margin: 20px;
 }
 
 .text-header {
