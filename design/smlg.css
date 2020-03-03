@@ -369,9 +369,9 @@ a {
     background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    min-height: 500px;
+    min-height: 100px;
     color: #ffffff;
-    padding: 5% 30%;
+    height: 100%;
 }
 
 .brand-content {
@@ -553,5 +553,16 @@ a {
 
     .new-article-container {
         display: none;
+    }
+
+    .brand-title {
+        font-size: auto;
+        font-size: 0.8rem;
+
+    }
+    
+    .brand-description {
+        font-size: 0.4rem;
+        line-height: 1.0rem;
     }
 }
