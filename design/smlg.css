@@ -28,6 +28,7 @@ h3 {
     color: #aaaaaa;
 }
 
+/* ブロック */
 .container {
     padding: 0 200px;
 }
@@ -80,7 +81,7 @@ a {
 .header-title {
     order: 2;
     height: 80%;
-    width: 30%;
+    flex-basis: 20%;
 }
 
 .smartlog-image {
@@ -88,8 +89,10 @@ a {
     height: 100%;
 }
 
+
 .header-nav {
     order: 3;
+    align-self: center;
 }
 
 .header-search {
@@ -97,21 +100,35 @@ a {
     display: flex;
     width: 20%;
     position: relative;
+    flex-basis: 30%;
 }
 
 .header-search-box {
     background-color: #f0f0f0;
-    height: 50%;
+    height: 40%;
     width: 100%;
     align-self: center;
     border: none;
+    text-align: left;
+    font-size: 1.0rem;
 }
 
 .header-search-button {
     position: absolute;
-    top: 40%;
-    right: 5%;
+    top: 40px;
+    right: 0;
     border: none;
+    width: 30px;
+    height: 30px;
+
+    background-color: #f0f0f0;
+    background-image: url(https://stat2.smartlog.jp/images/icons/icon_search.png);
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    
+    /* ポインタにする */
+    cursor: pointer;
+    cursor: hand;
 }
 
 .nav-list {
@@ -249,6 +266,10 @@ a {
     padding: 5px 0;
 }
 
+.item-active > a {
+    background-color: black;
+    color: #ffffff;
+}
 
 /* FEATURE */
 .feature-container {
@@ -301,6 +322,7 @@ a {
 .feature-article-author {
     order: 3;
     align-self: flex-end;
+    color: #777777;
 }
 
 .feature-article-description {
@@ -543,6 +565,19 @@ a {
 /* メディアクエリ */
 /* tablet */
 @media screen and (max-width: 959px) {
+    .header-title {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+    
+    .header-search {
+        display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
+    }
+
     .container {
         padding: 20px 0; /* デスクトップ以外はサイドの余白をとらない */
     }
@@ -571,6 +606,19 @@ a {
 
 /* mobile phone */
 @media screen and (max-width: 559px) {
+    .header-title {
+        width: 100%;
+        flex-basis: 100%;
+    }
+    
+    .header-nav {
+        display: none;
+    }
+    
+    .header-search {
+        display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
+    }
+    
     .container {
         padding: 20px 0; /* デスクトップ以外はサイドの余白をとらない */
     }

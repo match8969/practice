@@ -67,6 +67,30 @@ body {
 
 .image-content {
     width: 100%;
-    background-color: #111111;
-    padding: 20px;
+    align-self: center;
+}
+
+.image-content > img{
+    width: 100%;
+}
+
+
+/* mobile phone */
+@media screen and (max-width: 559px) {
+    .content-item {
+        flex-direction: column; 
+    }
+
+    .text-content {
+        order: 2;
+    }
+
+    .content-item:nth-child(2n-1) > .text-content {
+        margin: 0;
+    }
+
+    .content-item:nth-child(2n) > .text-content {
+        margin: 0;
+    }
+
 }
