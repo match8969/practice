@@ -1,0 +1,124 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box; outline: none;}
+    li{list-style: none;}
+    img,iframe{border: 0;}
+    header,article,section,footer,main,nav,aside{display: block;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    /* font-size: 62.5%; */
+}
+
+body {
+    background-color: #dddddd;
+}
+
+.balloon {
+    /* 疑似要素を操作するため */
+    position: relative; 
+	/* display: block; */
+	max-width: 400px;
+	margin: 1.5em auto;
+	padding: 10px;
+    background: #FFF;
+	border: solid 3px #555;
+	text-align: center;
+}
+
+.balloon-top::before{
+    content: "";
+    position: absolute;
+    top: -24px; /* ここは borderが12pxなので、上下あるので、2倍の24pxの計算 */
+    left: 50%;
+    /* 質問 :　なぜ15? 12ではなくて。: borderが3px設定なので、ballon時点で3px分すでにズレているから? */
+    margin-left: -15px;
+    /* margin-left: -12px; */
+    /* 枠を透明に設定 */
+    border: 12px solid transparent;
+    /* 下線のみ「白」線をひく */
+    border-bottom: 12px solid #FFF;
+    z-index: 2;
+}
+
+.balloon-top::after {
+    content: "";
+    position: absolute;
+    /* beforeよりも数字が大きいのは、beforeが上に乗ってくるから */
+    top: -30px;
+    left: 50%;
+    
+    /* beforeよりも数字が大きいのは、beforeが上に乗ってくるから、色のついた縁のみ見えるようにしている。 */
+    margin-left: -17px;
+    border: 14px solid transparent;
+    border-bottom: 14px solid #555;
+    z-index: 1; /* 一番下 */
+}
+
+.balloon-bottom::before {
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    margin-left: -15px;
+    border: 12px solid transparent;
+    border-top: 12px solid #FFF;
+    z-index: 2;
+}
+
+.balloon-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -17px;
+    border: 14px solid transparent;
+    border-top: 14px solid #555;
+    z-index: 1;
+}
+
+.balloon-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    margin-top: -15px;
+    border: 12px solid transparent;
+    border-right: 12px solid #FFF;
+    z-index: 2;
+}
+
+.balloon-left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -17px;
+    border: 14px solid transparent;
+    border-right: 14px solid #555;
+    z-index: 1;
+}
+
+.balloon-right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    margin-top: -15px;
+    border: 12px solid transparent;
+    border-left: 12px solid #FFF;
+    z-index: 2;
+}
+
+.balloon-right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    margin-top: -17px;
+    border: 14px solid transparent;
+    border-left: 14px solid #555;
+    z-index: 1;
+}
