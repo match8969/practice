@@ -1,0 +1,94 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box; outline: none;}
+    /* li{list-style: none;} */
+    img,iframe{border: 0;}
+    header,article,section,footer,main,nav,aside{display: block;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    /* font-size: 62.5%; */
+}
+
+body {
+    height: 100%;
+	width: 100%;
+    min-height: 100%;
+    background-color: #f6f6f6;
+    padding: 40px;
+    position: relative;
+    text-size-adjust: 100%;
+}
+
+/* 画面一杯に背景を足したい */
+.overlay {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0; /* display none でなくて、透過性で消す */
+	pointer-events: none; /* button のアクションを実行させない */
+    transition: linear 0.2s all;
+}
+
+.overlay.on {
+    pointer-events: all;
+    opacity: 1;
+}
+
+#menu-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* TODO: なぜ260?? */
+    width: 260px;
+    height: 100%;
+    min-height: 100vh; /* どんなデバイスでも縦は全部表示にいれる */
+    background-color: #ffffff;
+    /* ここtransrateXが同値だっけ? */ /* 最初から -100%をXにしている状態 */
+    transform: translate(-100%);
+    pointer-events: none;
+    /* transition: linear 0.2s all; */
+    transition: linear 0.2s all;
+}
+
+#menu-box.on {
+    transform: translate(0);
+    pointer-events: all;
+}
+
+#menu-box .menu-content {
+    padding: 20px;
+    height: 100%;
+    /* メニューbarだけスクロール */
+    overflow-y: scroll;
+}
+
+
+#menu-box .menu-content nav > ul > li{
+	padding: 1em 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+#menu-box .menu-content nav > ul > li ul{
+	margin-top: 1em;
+	padding-left: 20px;
+}
+
+#menu-box .menu-content nav > ul > li ul li{
+	font-size: 0.9em;
+	margin-bottom: 1em;
+}
+
+#menu-box .menu-content nav > ul > li ul li:last-child{
+	margin-bottom: 0;
+}
+
+#menu-box .menu-content .menu-close{
+	margin-bottom: 20px;
+}
