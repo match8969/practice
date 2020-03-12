@@ -13,12 +13,20 @@ html {
 }
 
 body {
+    height: 100%;
+	width: 100%;
+	min-height: 100%;
     background-color: #dddddd;
+}
+
+h2 {
+    text-align: center;
 }
 
 .balloon {
     /* 疑似要素を操作するため */
     position: relative; 
+    /* TODO: このdisplay: block が必要な理由は?? */
 	/* display: block; */
 	max-width: 400px;
 	margin: 1.5em auto;
@@ -118,6 +126,99 @@ body {
     top: 50%;
     right: -30px;
     margin-top: -17px;
+    border: 14px solid transparent;
+    border-left: 14px solid #555;
+    z-index: 1;
+}
+
+/* ------------------------------
+インタビュー形式
+------------------------------ */
+
+.balloon-box {
+    display: flex;
+    justify-content: space-between; /* 配下のitem間の隙間がそろう */
+    align-items: flex-start; /* 垂直方向。開始時点(上部)から始まる */ 
+    max-width: 680px;
+    margin: 1em auto; /* 横幅がそろう */
+}
+
+/* 子孫セレクタをクラスに。*/
+/* コンマ(,)だと複数指定 */
+.balloon-box .thumb {
+    width: 80px;
+}
+
+.balloon-box .thumb img {
+    width: 100%;
+    height: auto; /* widthに合わせる */
+}
+
+.balloon-box .content {    
+    /* これは必要?? 余ったサイズは全てcontentで*/
+    flex: 1;
+    position: relative;
+    display: block;
+    padding: 10px;
+    background: #FFF;
+	border: solid 3px #555;
+}
+
+.balloon-box.right-content .thumb{
+	margin-right: 20px;
+}
+
+/* TODO: このクラスの半角あく or 開かないってなんだっけ? */
+.balloon-box.right-content .balloon-content::before {
+    content: "";
+    position: absolute;
+    /* 画像を80px * 80px指定なので、半分の40px 下げると真ん中 */
+    top: 40px;
+    left: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-right: 12px solid #FFF;
+    z-index: 2;
+}
+
+.balloon-box.right-content .balloon-content::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    /* △の先を中心としたいので、縁14px(border)分だけ下に下がってしまうので、ネガティブでborder分上昇させてる。*/
+    margin-top: -14px;
+    border: 14px solid transparent;
+    border-right: 14px solid #555;
+    z-index: 1;
+}
+
+/* LEFT */
+.balloon-box.left-content {
+    flex-direction: row-reverse;
+}
+
+.balloon-box.left-content .thumb{
+    margin-left: 20px;
+}
+
+.balloon-box.left-content .balloon-content::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-left: 12px solid #FFF;
+    z-index: 2;
+}
+
+.balloon-box.left-content .balloon-content::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    margin-top: -14px;
     border: 14px solid transparent;
     border-left: 14px solid #555;
     z-index: 1;
