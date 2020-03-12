@@ -30,7 +30,15 @@ h3 {
 
 /* ブロック */
 .container {
-    padding: 0 200px;
+    padding: 0 100px;
+}
+
+.inner-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    justify-content: space-between;
 }
 
 .next-line {
@@ -54,14 +62,11 @@ h3 {
     left: 0;
     width: 40px;
     height: 40px;
-
 }
 
 /* 一覧ページ遷移 */
 .next-page {
-    display: flex;
-    justify-content: flex-end;
-    height: 10%;
+    text-align: right;
 }
 
 /* デフォルトに設定する慣習などある?? */
@@ -196,8 +201,6 @@ a {
 }
 
 .top-recommend-list{
-    display: flex;
-    flex-direction: column;
     height: 80%; /* 下部80%で レコメンドの記事のリストを収めたい */
     max-height: 360px;
     padding: 10px 0;
@@ -245,8 +248,12 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-height: 1300px; /* 最大の大きさ */
     margin: 20px 0;
+
+    /*
+    - 基本的には上下で余白が揃っている方がバランスが良い
+    - 明確に別セクションである下部のセクションとの距離が10pxは相対的に狭すぎる
+    */
 }
 
 .category-container {
@@ -428,7 +435,9 @@ a {
 .brand-container {
     background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    /* 中心*/
+    background-size: cover; /* 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する */
+    background-position: center center; /* 背景画像の表示開始位置を指定する。縮小したときに 縦50% 横50%の位置の画像がのこっていく */
     min-height: 100px;
     color: #ffffff;
     height: 500px;
