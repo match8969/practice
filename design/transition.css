@@ -1,0 +1,56 @@
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    transition: all 300ms ease;
+}
+
+.box:hover {
+    background-color: red;
+    transform: rotate(45deg)
+}
+
+.animate {
+    /* position: fixed; */
+    
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;
+    animation: anime 5s ease -2s infinite none running;
+    /* animation: anime 5s ease 0s infinite; */
+
+}
+
+@keyframes anime {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        /* top: 0;
+        right: 0; */
+        transform:translate(100px, 0px);
+    }
+
+    50% {
+        /* bottom: 0;
+        right: 0; */
+        transform:translate(100px, 100px);
+    }
+
+    75% {
+        /* bottom: 0;
+        left: 0; */
+        transform:translate(0px, 100px);
+    }
+
+    100% {
+        transform:translate(0px, 0px);
+    }
+
+
+
+}
+
