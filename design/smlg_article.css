@@ -24,4 +24,5 @@ blockquote::before {
     font-size: 100px;
     top: 0;
     left: 0;
+    color: #cccccc;
 }
