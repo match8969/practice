@@ -11,6 +11,11 @@ html {
     /* font-size: 62.5%; */
 }
 
+/* デフォルトに設定する慣習などある?? */
+a {
+    text-decoration: none;
+    color: #000000;
+}
 
 blockquote {
     position: relative;
@@ -25,4 +30,194 @@ blockquote::before {
     top: 0;
     left: 0;
     color: #cccccc;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    /* 文字間 */
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+/* === 共通化 === */
+.container {
+    padding: 0 100px;
+    max-width: 1000px;
+    margin: 0 auto; /* 中心 */
+}
+
+.breadcrumb-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.breadcrumb-item {
+
+}
+
+.tag-list {
+    display: flex;
+}
+
+.tag-item {
+    background-color: #eeeeee;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+/* .breadcrumb-item:nth-child(1)::before {
+    content: "";
+} */
+
+.breadcrumb-item:not(:first-child)::before {
+    content: ">";
+    margin-right: 0.5em;
+}
+.breadcrumb-item::before {
+    content: ">";
+    /* TODO: 1番目のみ適用を外す */
+}
+/* .breadcrumb-item:nth-child(1)::before {
+    content: "";
+
+} */
+
+.sns-list {
+    display: flex;
+}
+
+.sns-item {
+
+}
+
+
+
+
+/* === 指定 === */
+
+/* HEADER */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.header-title {
+    order: 2;
+    height: 80%;
+    flex-basis: 20%;
+}
+
+.smartlog-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.header-nav {
+    order: 3;
+    align-self: center;
+}
+
+.header-search {
+    order: 1;
+    display: flex;
+    width: 20%;
+    position: relative;
+    flex-basis: 30%;
+}
+
+.header-search-box {
+    background-color: #f0f0f0;
+    height: 40%;
+    width: 100%;
+    align-self: center;
+    border: none;
+    text-align: left;
+    font-size: 1.0rem;
+}
+
+.header-search-button {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    border: none;
+    width: 30px;
+    height: 30px;
+
+    background-color: #f0f0f0;
+    background-image: url(https://stat2.smartlog.jp/images/icons/icon_search.png);
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    
+    /* ポインタにする */
+    cursor: pointer;
+    cursor: hand;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item {
+    padding: 20px;
+}
+
+/* Main */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.main-content {
+    border-right: 1px solid #cccccc;
+    /* padding: 20px; */
+    padding: 0 20px 20px 0;
+}
+
+/* aside */
+.sub-content {
+
+}
+
+/* Article */
+.article-date {
+    text-align: right;
+}
+
+.table-of-content {
+    background-color: #eeeeee;
+}
+
+/* h3をh2に、かえる */
+article h2 {
+    margin: 1rem 0;
+    padding: 1em 0; /* ここはタイトルの幅をあわせるため */
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+article h3 {
+    margin: 1.6rem 0;
+    border-top: 1px;
+
+    position: relative;
+}
+
+article h3::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-1px);
 }
