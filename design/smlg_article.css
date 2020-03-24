@@ -232,9 +232,8 @@ article h2::before {
 article h3 {
     margin: 1.6rem 0;
     font-size: 1.2rem;
-    /* border-top: 1px; */
+    border-top: 1px solid #cccccc;
     padding-top: 1em;
-
     position: relative;
 }
 
@@ -244,7 +243,34 @@ article h3::before {
     position: absolute;
     width: 16%;
     height: 1px;
-    top: -1px;
+    top: 0;
     left: 0;
     transform: translateY(-1px);
+    background: #000000;
+}
+
+article h4 {
+    font-size: 1.1rem;
+    margin: 1.6rem 0;
+    position: relative;
+    transform: translateX(1.6rem);
+}
+
+article h4::before {
+    content: "";
+    margin-right: 1.6rem;
+    position: absolute;
+    top: 0.25em;
+    left: -1.6rem;
+    border: 0.5em solid #cccccc;
+}
+
+article h4::after {
+    content: "";
+    position: absolute;
+    top: 0.25em;
+    left: -1.6rem;
+    border: 0.5em solid transparent;
+    border-left: 0.5em solid #000000;
+    border-top: 0.5em solid #000000;
 }
