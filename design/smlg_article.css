@@ -9,7 +9,7 @@ html {
     -webkit-text-size-adjust: 100%;
     width: 100%;
     /* font-size: 62.5%; */
-    font-size: 16px;    
+    font-size: 16px;
 }
 
 /* デフォルトに設定する慣習などある?? */
@@ -54,11 +54,22 @@ p {
 }
 
 /* === 共通化 === */
+/* 文字 */
+.subtitle {
+    color: #aaaaaa;
+}
+
+/* ブロック */
 .container {
     padding: 0 20px; /* メディアとかなら一旦20pxあたりで設定 */
     /* padding: 0 100px; */
     max-width: 1000px;
     margin: 0 auto; /* 中心 */
+}
+
+.article-pickup h2 {
+    text-align: center;
+    /* font-size: 1rem; */
 }
 
 .breadcrumb-list {
@@ -85,18 +96,9 @@ p {
     padding: 10px;
 }
 
-
-/* .breadcrumb-item:nth-child(1)::before {
-    content: "";
-} */
-
 .breadcrumb-item:not(:first-child)::before {
     content: ">";
     margin-right: 0.5em;
-}
-.breadcrumb-item::before {
-    content: ">";
-    /* TODO: 1番目のみ適用を外す */
 }
 
 .breadcrumb-item:nth-child(1)::before {
@@ -111,6 +113,31 @@ p {
 
 }
 
+.pagenation-list {
+    display: flex;
+}
+
+.sns-list {
+    display: flex;
+}
+
+.next-line {
+    font-size: 0.8rem;
+}
+.next-line::before {
+    content: "\A";
+    white-space: pre; /* ソース中のホワイトスペースをそのまま表示 */
+}
+
+
+.ad {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000000;
+    margin: 10px 0;
+}
 
 /* HEADER */
 .header-container {
@@ -129,7 +156,6 @@ p {
     width: 100%;
     height: 100%;
 }
-
 
 .header-nav {
     order: 3;
@@ -180,6 +206,16 @@ p {
     padding: 20px;
 }
 
+/* 一覧ページ遷移 */
+.index-page {
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.index-page::before {
+    content: "->";
+}
+
 /* Main */
 .content-wrapper {
     display: flex;
@@ -193,11 +229,6 @@ p {
     padding: 0 20px 20px 0; /* 右と下に余白。左上につまるように */
 }
 
-/* aside */
-.sub-content {
-
-}
-
 /* Article */
 .article-date {
     text-align: right;
@@ -206,6 +237,11 @@ p {
 .table-of-content {
     background-color: #eeeeee;
     padding: 1rem;
+}
+
+/* 目次は一段下げる */
+.toc-list, .toc-inner-list {
+    padding-left: 1em;
 }
 
 /* h3をh2に、かえる */
@@ -249,6 +285,16 @@ article h3::before {
     background: #000000;
 }
 
+.table-of-content h3 {
+    margin: 0;
+    padding: 1em 0;
+    border-top: none; 
+}
+
+.table-of-content h3::before {
+    content: none;   
+}
+
 article h4 {
     font-size: 1.1rem;
     margin: 1.6rem 0;
@@ -273,4 +319,179 @@ article h4::after {
     border: 0.5em solid transparent;
     border-left: 0.5em solid #000000;
     border-top: 0.5em solid #000000;
+}
+
+/* aside */
+.sub-content {
+    /* total 300pxで固定 */
+    margin-left: 20px;
+    min-width: 280px;
+}
+
+.aside-header {
+    font-size: 1rem;
+}
+
+.article-item {
+    display: flex;
+    /* flex-direction: row-reverse; */
+}
+
+.article-item-content {
+    padding: 5px 5px;
+    order: 2;
+    /* TODO: 下線もほしい */
+}
+
+.article-item-title {
+    font-size: 0.7rem; /* 本番は13pxで 0.8remでOKのはずだが、すこしあふれる */
+}
+
+.article-item-author {
+    font-size: 0.6rem;
+}
+
+.article-item-image {
+    order: 1;
+}
+
+/* Brand */
+.brand-container {
+    background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
+    background-repeat: no-repeat;
+    /* 中心*/
+    background-size: cover; /* 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する */
+    background-position: center center; /* 背景画像の表示開始位置を指定する。縮小したときに 縦50% 横50%の位置の画像がのこっていく */
+    min-height: 100px;
+    color: #ffffff;
+    height: 500px;
+    min-height: 300px;
+    margin: 20px 0;
+}
+
+.brand-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-concept {
+    font-size: 2rem;
+}
+
+.brand-title {
+    font-size: 4rem; 
+}
+
+.brand-description {
+    line-height: 2.5rem;
+}
+
+
+
+/* Footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10% 10px 10%;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-icon-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    padding: 5%;
+}
+
+.footer-icon-sns-list {
+    display: flex;
+    width: 100%;
+}
+
+.footer-icon-sns-item {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+}
+
+.sns-icon::before {
+    font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-category-list {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.footer-category-item {
+    width: 50%;
+}
+
+.footer-category-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    padding: 5%;
+}
+
+.footer-category-header {
+    padding-bottom: 10%;
+}
+
+.footer-category-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-category-item {
+    width: 50%;
+}
+
+.footer-company-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    padding: 5%;
+}
+
+.footer-company-header {
+    padding-bottom: 10%;
+}
+
+.footer-company-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-company-item {
+    width: 50%;
+}
+
+.footer-copyrignt {
+    align-self: flex-end;
+    color: #777777;
+    font-size: 0.7rem;
+}
+
+.footer-user-env {
+    border: 1px solid #000000;
+    position: fixed; /* 右下に固定 */
+    bottom: 5%;
+    right: 5%;
+    width: 10%;
+    height: 10%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center; /* 垂直方向の中央 */
+}
+
+.footer-user-env-content {
+    align-self: center; /* 水平方向の中央 */
 }
