@@ -388,10 +388,6 @@ p {
 }
 
 /* Article */
-.article-date {
-    text-align: right;
-}
-
 .table-of-content {
     background-color: #eeeeee;
     padding: 1rem;
@@ -644,4 +640,11 @@ article h4::after {
 
 .footer-user-env-content {
     align-self: center; /* 水平方向の中央 */
+}
+
+/* Media Query*/
+@media (max-width: 559px){
+    .pan-content{
+        display: block;
+    }
 }
