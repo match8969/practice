@@ -122,8 +122,12 @@ p {
 }
 
 .article-pickup h2 {
+    margin: 20px 0;;
     text-align: center;
     font-size: 1rem;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: normal;
     background: url(https://stat2.smartlog.jp/images/h3.png) right 200px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 200px top 8px no-repeat;
     background-size: 51px 4px;
  
@@ -170,6 +174,7 @@ p {
 .author-name {
     display: flex;
     font-size: 0.85rem;
+    color: #888888;
 }
 
 .author-name > a {
@@ -178,15 +183,18 @@ p {
 
 .author-name .favlink {
     margin-left: 0.3rem;
+    display: flex;
 }
 
 .author-name .favlink a {
     display: flex;
 }
 
+.author-name .favlink svg{
+    width: 12px;
+}
 .author-name .favlink a svg{
     width: 12px;
-    
 }
 
 .author-name .favlink a em {
@@ -477,6 +485,13 @@ main .article-item-content {
     order: 2;
 }
 
+main .article-pickup h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: normal;
+}
+
 
 /* aside */
 .sub-content {
@@ -497,6 +512,11 @@ main .article-item-content {
     border-top: 1px solid #cccccc;
 }
 
+.article-item:last-child {
+    border-bottom: 1px solid #cccccc;
+}
+
+
 aside .article-item-content {
     padding: 5px 5px;
     order: 2;
@@ -504,6 +524,8 @@ aside .article-item-content {
 
 .article-item-title {
     font-size: 0.7rem; /* 本番は13pxで 0.8remでOKのはずだが、すこしあふれる */
+    /* font-style: normal; */
+    font-family: sans-serif;
 }
 
 .article-item-author {
