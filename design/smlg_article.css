@@ -117,14 +117,16 @@ p {
 /* ブロック */
 .container {
     padding: 0 20px; /* メディアとかなら一旦20pxあたりで設定 */
-    /* padding: 0 100px; */
     max-width: 1000px;
     margin: 0 auto; /* 中心 */
 }
 
 .article-pickup h2 {
     text-align: center;
-    /* font-size: 1rem; */
+    font-size: 1rem;
+    background: url(https://stat2.smartlog.jp/images/h3.png) right 200px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 200px top 8px no-repeat;
+    background-size: 51px 4px;
+ 
 }
 
 .breadcrumb-list {
@@ -137,7 +139,6 @@ p {
 }
 
 .breadcrumb-item:last-child{
-    /* display: flex; */
     margin-right: 0; /* 最後の要素のみ、右のマージンは不要 */
 }
 
@@ -171,6 +172,10 @@ p {
     font-size: 0.85rem;
 }
 
+.author-name > a {
+    color: #888888;
+}
+
 .author-name .favlink {
     margin-left: 0.3rem;
 }
@@ -180,12 +185,14 @@ p {
 }
 
 .author-name .favlink a svg{
-    width: 15px;
+    width: 12px;
+    
 }
 
 .author-name .favlink a em {
     font-style: normal;
     margin-left: 0.3rem;
+    color: #888888;
 }
 
 .article-date {
@@ -193,6 +200,12 @@ p {
     font-family: serif;
     font-style: italic;
     font-size: 0.85rem;
+}
+
+.sns-recommend-message {
+    color: red;
+    font-size: 0.75rem;
+    padding: 10px 0;
 }
 
 .sns-list {
@@ -211,10 +224,6 @@ p {
 
 .sns-item .sns-icon {
     color: #ffffff;
-}
-
-.sns-icon::before {
-    font-size: 2.5rem;
 }
 
 .sns-item > a {
@@ -237,18 +246,6 @@ p {
 .sns-item:last-child a svg {
     width: 12px;
     margin-right: 0.3rem;
-}
-
-.sns-item .fa-facebook-square {
-    color: blue;
-}
-
-.sns-item .fa-twitter-square {
-    color: rgb(14, 185, 241);
-}
-
-.sns-item .fa-line {
-    color: rgb(14, 241, 44);
 }
 
 .facebook-mark {
@@ -475,6 +472,12 @@ article h4::after {
     border-top: 0.5em solid #000000;
 }
 
+main .article-item-content {
+    padding: 20px 10px;
+    order: 2;
+}
+
+
 /* aside */
 .sub-content {
     /* total 300pxで固定 */
@@ -484,13 +487,17 @@ article h4::after {
 
 .aside-header {
     font-size: 1rem;
+    background: url(https://stat2.smartlog.jp/images/h3.png) right 15px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 15px top 8px no-repeat;
+    background-size: 51px 4px;
 }
 
 .article-item {
     display: flex;
+    padding: 10px 0;
+    border-top: 1px solid #cccccc;
 }
 
-.article-item-content {
+aside .article-item-content {
     padding: 5px 5px;
     order: 2;
 }
