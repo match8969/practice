@@ -111,7 +111,12 @@ p {
 /* === 共通化 === */
 /* 文字 */
 .subtitle {
+    font-size: 0.8rem;
     color: #aaaaaa;
+    text-align: center;
+    font-weight: none;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
 /* ブロック */
@@ -129,15 +134,40 @@ p {
 }
 
 .article-pickup h2 {
-    margin: 20px 0;;
+    margin: 20px 0 0 0;
     text-align: center;
     font-size: 1rem;
     font-style: italic;
     font-family: "Times New Roman";
     font-weight: normal;
-    background: url(https://stat2.smartlog.jp/images/h3.png) right 200px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 200px top 8px no-repeat;
-    background-size: 51px 4px;
- 
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.article-pickup h2::before,
+.article-pickup h2::after {
+    content: "";
+    display: block;
+    max-width: 50px;
+    height: 10px;
+    background: url(https://stat2.smartlog.jp/images/h3.png) no-repeat;
+    background-size: auto 100%; /* 画像を縮小はせずに、サイスはかわる */
+    background-size: 100% auto;
+    background-position: center center;
+    flex: 1;
+}
+
+.article-pickup h2::before {
+    background-position: right center;
+    margin-right: 0.5em;
+}
+
+.article-pickup h2::after {
+    background-position: left center;
+    margin-left: 0.5em;
 }
 
 .breadcrumb-list {
@@ -255,6 +285,7 @@ p {
 
 .sns-item > a img {
     max-width: 20px;
+    max-height: 20px; /* facebook　のみたかいから */
     height: auto;
 }
 
@@ -380,6 +411,7 @@ p {
 .index-page {
     text-align: right;
     font-size: 0.8rem;
+    margin: 0.5rem;
 }
 
 .index-page::before {
@@ -507,11 +539,24 @@ main .article-pickup h2 {
     min-width: 280px;
 }
 
-.aside-header {
+/* .article-pickup .aside-header {
+    margin: 20px 0;;
+    text-align: center;
     font-size: 1rem;
-    background: url(https://stat2.smartlog.jp/images/h3.png) right 15px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 15px top 8px no-repeat;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: normal;
+    background: url(https://stat2.smartlog.jp/images/h3.png) right 200px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 200px top 8px no-repeat;
     background-size: 51px 4px;
-}
+} */
+
+/* .aside-header {
+    font-size: 1rem;
+
+    background: url(https://stat2.smartlog.jp/images/h3.png) right center top center no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 15px top 8px no-repeat;
+    background-size: 51px 4px;
+
+} */
 
 .article-item {
     display: flex;
@@ -529,9 +574,12 @@ aside .article-item-content {
     order: 2;
 }
 
+.article-item-content {
+    vertical-align: middle;
+}
+
 .article-item-title {
     font-size: 0.7rem; /* 本番は13pxで 0.8remでOKのはずだが、すこしあふれる */
-    /* font-style: normal; */
     font-family: sans-serif;
 }
 
@@ -547,13 +595,16 @@ aside .article-item-content {
 .brand-container {
     background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
     background-repeat: no-repeat;
+    /* display: flex;
+    align-items: center; */
     /* 中心*/
     background-size: cover; /* 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する */
     background-position: center center; /* 背景画像の表示開始位置を指定する。縮小したときに 縦50% 横50%の位置の画像がのこっていく */
     min-height: 100px;
     color: #ffffff;
-    height: 500px;
-    min-height: 300px;
+    /* hegith は還俗いれない。 */
+    /* height: 500px; */
+    min-height: 460px;
     margin: 20px 0;
 }
 
@@ -561,7 +612,14 @@ aside .article-item-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px 0;
+}
+
+.brand-content::before {
+    /* TODO */
+    background-color: ;
+    
 }
 
 .brand-content > img {
@@ -575,7 +633,8 @@ aside .article-item-content {
 }
 
 .brand-title {
-    font-size: 4rem; 
+    font-size: 4rem;
+    z-index: 2; 
 }
 
 .brand-description {
@@ -583,6 +642,7 @@ aside .article-item-content {
     letter-spacing: 1px; /* 文字間 */
     margin: 20px auto;
     width: 518px;
+    z-index: 2;
 }
 
 
