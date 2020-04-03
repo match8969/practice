@@ -595,8 +595,7 @@ aside .article-item-content {
 .brand-container {
     background-image: url("https://stat2.smartlog.jp/images/footer-enjoy-2018-35.jpg");
     background-repeat: no-repeat;
-    /* display: flex;
-    align-items: center; */
+    position: relative;
     /* 中心*/
     background-size: cover; /* 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する */
     background-position: center center; /* 背景画像の表示開始位置を指定する。縮小したときに 縦50% 横50%の位置の画像がのこっていく */
@@ -608,6 +607,14 @@ aside .article-item-content {
     margin: 20px 0;
 }
 
+.brand-container::before {
+    content: "";
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 .brand-content {
     display: flex;
     flex-direction: column;
@@ -616,16 +623,11 @@ aside .article-item-content {
     padding: 20px 0;
 }
 
-.brand-content::before {
-    /* TODO */
-    background-color: ;
-    
-}
-
 .brand-content > img {
     margin: 20px auto;
     height: 110px;
     width: 518px;
+    z-index: 1;
 }
 
 .brand-concept {
@@ -702,7 +704,6 @@ aside .article-item-content {
 .footer-category-header {
     padding-bottom: 20px;
     font-size: 0.7rem;
-    font-weight: normal;
     color: #888888;
 }
 
