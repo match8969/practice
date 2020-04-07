@@ -411,7 +411,7 @@ p {
 .index-page {
     text-align: right;
     font-size: 0.8rem;
-    margin: 0.5rem;
+    padding: 1em;
 }
 
 .index-page::before {
@@ -547,25 +547,6 @@ aside .article-pickup h3 {
     min-width: 280px;
 }
 
-/* .article-pickup .aside-header {
-    margin: 20px 0;;
-    text-align: center;
-    font-size: 1rem;
-    font-style: italic;
-    font-family: "Times New Roman";
-    font-weight: normal;
-    background: url(https://stat2.smartlog.jp/images/h3.png) right 200px top 8px no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 200px top 8px no-repeat;
-    background-size: 51px 4px;
-} */
-
-/* .aside-header {
-    font-size: 1rem;
-
-    background: url(https://stat2.smartlog.jp/images/h3.png) right center top center no-repeat,url(https://stat2.smartlog.jp/images/h3.png) left 15px top 8px no-repeat;
-    background-size: 51px 4px;
-
-} */
-
 .article-item {
     display: flex;
     padding: 10px 0;
@@ -598,6 +579,13 @@ aside .article-item-content {
 
 .article-item-image {
     order: 1;
+}
+
+
+/* Stickyがきかない */
+.aside-ad-last{  
+    position: sticky;
+    top: 0;
 }
 
 /* Brand */
