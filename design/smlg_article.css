@@ -522,7 +522,6 @@ article h4::after {
 main .article-item-content {
     padding: 20px 10px;
     order: 2;
-    /* line-height: 1.3em; */
 }
 
 main .article-item-content p, main .article-item-content h3 {
@@ -537,6 +536,9 @@ main .article-pickup h2 {
     font-weight: normal;
 }
 
+aside .article-pickup h3 {
+    font-weight: normal;
+}
 
 /* aside */
 .sub-content {
