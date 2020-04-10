@@ -696,7 +696,7 @@ aside .article-item-content {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    max-width: 518px; /* ★ */
+    max-width: 518px; /* widthは100%でコンテナなどに適用しやすく。 最大値を指定 */
     margin: 0 auto;
 }
 
