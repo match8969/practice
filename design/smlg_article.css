@@ -364,6 +364,14 @@ p {
     align-self: center;
 }
 
+#header-nav-toggle {
+    display: none;
+}
+
+.header-nav-touchscreen {
+    display: none;
+}
+
 .header-search {
     order: 1;
     display: flex;
@@ -619,12 +627,15 @@ aside .article-item-content {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    max-width: 518px; /* ★ */
+    margin: 0 auto;
 }
 
 .brand-content > img {
     margin: 20px auto;
     height: 110px;
-    width: 518px;
+    width: 100%;
+    /* width: 518px; */
     z-index: 1;
 }
 
@@ -779,6 +790,18 @@ aside .article-item-content {
         display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
     }
 
+    #header-nav-toggle {
+        display: block;
+        width: 100%;
+        background: url(https://stat2.smartlog.jp/images/icons/icon_menu.png) no-repeat;
+    }
+
+    .header-nav-touchscreen {
+        /* TODO: 右にずらす */
+        /* position: ; */
+    }
+    
+
     .header-search {
         display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
     }
@@ -809,6 +832,7 @@ aside .article-item-content {
 
 
     .footer-user-env {
+        
         /* position: relative; */
         /* width: auto;
         bottom: 10%;
