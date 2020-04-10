@@ -124,6 +124,7 @@ p {
     padding: 0 20px; /* メディアとかなら一旦20pxあたりで設定 */
     max-width: 1000px;
     margin: 0 auto; /* 中心 */
+    
 }
 
 .inner-container {
@@ -759,8 +760,89 @@ aside .article-item-content {
 }
 
 /* Media Query*/
+
+/* スマホ */
 @media (max-width: 559px){
+
+    .container {
+        padding: none;
+    }
+    
+    /* header */
+    .header-title {
+        width: 100%;
+        flex-basis: 100%;
+        /* TODO : ロゴが大きすぎ */
+    }
+
+    .header-nav {
+        display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
+    }
+
+    .header-search {
+        display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
+    }
+    
+    /* main */
+    main {
+        width: 100%;
+    }
+
+    .main-content {
+        border: none;
+        padding: 0;
+    }
+
+    main section h4{
+        padding: 0 1em 0 0;
+        width: 100%;
+    }
+
+    /* article h2 */
+    article section img {
+        width: 100%;
+    }
+
     .pan-content{
         display: block;
     }
+
+
+    .footer-user-env {
+        /* position: relative; */
+        /* width: auto;
+        bottom: 10%;
+        right: 10%; */
+    }
 }
+
+/* タブレット */
+@media (max-width: 959px){
+    
+    /* header */
+    .header-title {
+        width: 100%;
+        flex-basis: 100%;
+        /* TODO : ロゴが大きすぎ */
+    }
+
+    .header-nav {
+        display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
+    }
+
+    .header-search {
+        display: none; /* TODO: ここはハンバーガーの中にあとでいれる */
+    }
+
+    /* aside */
+    .sub-content {
+        display: none;
+    }
+
+    /* footer */
+    .footer-icon-smartlog {
+        display: none;
+    }
+
+}
+
