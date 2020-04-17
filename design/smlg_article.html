@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="smlg_article.css">
     <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="smlg_article.js" type="text/javascript"></script>
     <meta name="viewport" content="widht=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
     <title>Smartlog Article</title>
 </head>
@@ -10,7 +12,7 @@
     <!-- https://smartlog.jp/36970 -->
     <header class="header-container container">
         <h1 class="header-title">
-            <a href="/" title="トップページへ">
+            <a href="xxx" title="トップページへ">
                 <img src="https://stat2.smartlog.jp/images/logo.svg" alt="Smartlogのロゴ" class="smartlog-image">
             </a>
             
@@ -26,10 +28,29 @@
             <button type="submit" value="xxx" class="header-search-button"></button>
         </form>
 
+        
         <div id="header-nav-toggle">
-            
+            <a href="javascript:;">
+                <span></span>
+            </a>
         </div>
+        
         <nav class="header-nav-touchscreen">
+            <div id="header-nav-toggle-close">
+                <a href="javascript:;">
+                    <span>とじる</span>
+                </a>
+            </div>
+
+            <ul class="nav-sign-list">
+                <li class="nav-sign-item">新規登録</li>
+                <li class="nav-sign-item">ログイン</li>
+            </ul>
+
+            <form">
+                <input type="search" placeholder="気になるワードで検索" class="header-search-box">
+            </form>
+
             <ul class="nav-list-touchscreen">
                 <li class="nav-item-touchscreen">xxx</li>
                 <li class="nav-item-touchscreen">xxx</li>
