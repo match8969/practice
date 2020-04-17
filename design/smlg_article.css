@@ -391,12 +391,13 @@ p {
 
 @media (max-width: 559px){
     .smartlog-image {      
-        width: 100%;
-        width: 50%;
+        width: 30vw;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+
+        /* TODO: ロゴがハンバーガーの横幅だけ右にずれてしまっている。*/
     }
 }
 
@@ -438,6 +439,29 @@ p {
     .header-nav-touchscreen {
         /* TODO: 右にずらす */
         /* position: ; */
+    }
+}
+
+.app {
+    display: none;
+}
+
+@media (max-width: 559px){
+    .app {
+        display: flex;
+        width: 100%;
+        max-width: 20vw;
+        font-size: 0.5em;
+        order: 3;        
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .app > a {
+        color: #ffffff;
+        background-color: #000000;
+        padding: 10px;
     }
 }
 
