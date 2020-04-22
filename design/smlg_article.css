@@ -140,6 +140,12 @@ p {
     justify-content: space-between;
 }
 
+@media (max-width: 559px){
+    .inner-container {
+        flex-direction: column;
+    }
+}
+
 .article-pickup h2 {
     margin: 20px 0 0 0;
     text-align: center;
@@ -765,6 +771,12 @@ aside .article-item-content {
     margin: 20px 0;
 }
 
+@media (max-width: 559px){
+    .brand-container {
+        margin: 0;
+    }
+}
+
 .brand-container::before {
     content: "";
     background-color: rgba(0,0,0,0.2);
@@ -783,7 +795,6 @@ aside .article-item-content {
     margin: 0 auto;
 }
 
-/* スマホ */
 @media (max-width: 559px){
     .brand-content {
         padding: 0 20px;
@@ -834,6 +845,18 @@ aside .article-item-content {
     padding: 5%;
 }
 
+@media (max-width: 559px){
+    .footer-icon-content {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 559px){
+    .footer-icon-smartlog {
+        max-width: 40vw;
+    }
+}
+
 .footer-icon-sns-list {
     display: flex;
     width: 100%;
@@ -851,9 +874,22 @@ aside .article-item-content {
     height: 100%;
 }
 
+@media (max-width: 559px){
+    .sns-icon::before {
+        font-size: 5rem; /* 微妙な右の隙間が iphone 6以上にある。*/
+    }
+}
+
 .footer-category-list {
     display: flex;
     flex-wrap:wrap;
+}
+
+@media (max-width: 559px){
+    .footer-category-list {
+        align-items: center;
+        padding: 0 0 0 2em;
+    }
 }
 
 .footer-category-list > li {
@@ -867,10 +903,22 @@ aside .article-item-content {
     padding: 5%;
 }
 
+@media (max-width: 559px){
+    .footer-category-content {
+        padding: 10px;
+    }
+}
+
 .footer-category-header {
     padding-bottom: 20px;
     font-size: 0.7rem;
     color: #888888;
+}
+
+@media (max-width: 559px){
+    .footer-category-header {
+        padding-bottom: 10px;
+    }
 }
 
 .footer-category-item {
@@ -885,15 +933,34 @@ aside .article-item-content {
     padding: 5%;
 }
 
+@media (max-width: 559px){
+    .footer-company-content {
+        padding: 10px;
+    }
+}
+
 .footer-company-header {
     padding-bottom: 20px;
     font-size: 0.7rem;
     color: #888888;
 }
 
+@media (max-width: 559px){
+    .footer-company-header {
+        padding-bottom: 10px;
+    }
+}
+
 .footer-company-list {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (max-width: 559px){
+    .footer-company-list {
+        align-items: center;
+        padding: 0 0 0 2em;
+    }
 }
 
 .footer-company-list > li {
