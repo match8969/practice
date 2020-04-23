@@ -333,6 +333,12 @@ p {
     background-color: #eeeeee;
 }
 
+@media (max-width: 559px){
+    .favorite-mark {
+        word-break: keep-all;
+    }
+}
+
 .pagenation-list {
     display: flex;
 }
@@ -441,7 +447,7 @@ p {
 
 @media (max-width: 559px){
     .header-nav-touchscreen {
-        /* TODO: 右にずらす */
+        
         display: flex;
         flex-direction: column;
         color: #ffffff;
@@ -752,6 +758,35 @@ aside .article-item-content {
 }
 
 
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em 0.5em;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+@media (max-width: 559px){
+    .button {
+        min-width: 300px;
+    }
+}
+
+.button > a {
+    color: #ffffff;   
+}
+
+.article-btn {
+    background-color: #8b0000;
+}
+
+.item-btn {
+    background-color: #000000;
+}
+
+
+
 /* Stickyがきかない */
 .aside-ad-last{  
     position: sticky;
@@ -996,8 +1031,11 @@ aside .article-item-content {
     align-self: center; /* 水平方向の中央 */
 }
 
-/* Media Query*/
-
-/* スマホ */
+@media (max-width: 559px){
+    .footer-user-env {
+        width: 20vw;
+        height: 20vw;
+    }
+}
 
 
