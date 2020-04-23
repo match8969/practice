@@ -490,7 +490,9 @@ p {
         order: 3;        
         justify-content: center;
         align-items: center;
-
+        /* 改行によるレイアウトの崩れを防ぐ */
+        /* white-space: nowrap;  */ /* これでもOK */
+        word-break: keep-all; /* one wordのため、こちらでOK */
     }
 
     .app > a {
