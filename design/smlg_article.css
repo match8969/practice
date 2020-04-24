@@ -8,11 +8,25 @@
 html {
     -webkit-text-size-adjust: 100%;
     width: 100%;
-    /* font-size: 62.5%; */
-    font-size: 16px;
+    font-size: 14px;
+}
+
+@media (max-width: 559px){
+    html {
+        font-size: 12px;
+    }
+}
+
+body {
+    font-family: "游ゴシック",YuGothic,Verdana,Roboto,"Droid Sans","メイリオ",Meiryo,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック",sans-serif;
+}
+
+h1 {
+    margin: 10px 0;
 }
 
 /* デフォルトに設定する慣習などある?? */
+
 a {
     text-decoration: none;
     color: #000000;
@@ -591,10 +605,22 @@ p {
     }
 }
 
+@media (max-width: 559px){
+    .main-content > nav {
+        display: none;
+    }
+}
+
 /* Article */
 .table-of-content {
     background-color: #eeeeee;
     padding: 1rem;
+}
+
+@media (max-width: 559px){
+    .table-of-content > h3 {
+        text-align: center;
+    }
 }
 
 /* 目次は一段下げる */
@@ -686,6 +712,17 @@ article h4::after {
     border: 0.5em solid transparent;
     border-left: 0.5em solid #000000;
     border-top: 0.5em solid #000000;
+}
+
+article p {
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+@media (max-width: 559px){
+    article p {
+        font-size: 1.4em;
+    }
 }
 
 main .article-item-content {
