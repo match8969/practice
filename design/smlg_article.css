@@ -870,6 +870,8 @@ aside .article-item-content {
 @media (max-width: 559px){
     .brand-container {
         margin: 0;
+        background-image: none;
+        min-height: auto;
     }
 }
 
@@ -879,6 +881,12 @@ aside .article-item-content {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 559px){
+    .brand-container::before {
+        content: none;
+    }
 }
 
 .brand-content {
@@ -893,7 +901,8 @@ aside .article-item-content {
 
 @media (max-width: 559px){
     .brand-content {
-        padding: 0 20px;
+        /* padding: 0 20px; */
+        display: none;
     }
 }
 
@@ -905,6 +914,20 @@ aside .article-item-content {
     z-index: 1;
 }
 
+.brand-content-mobile {
+    display: none;
+}
+
+@media (max-width: 559px){
+    .brand-content-mobile {
+        display: block;
+        
+    }
+    .brand-content-mobile > img {
+        max-width: 100vw;
+        
+    }
+}
 .brand-concept {
     font-size: 2rem;
 }
@@ -956,11 +979,14 @@ aside .article-item-content {
     }
 }
 
-.footer-scroll-top > a::before {
-    content: "";
-
-
+@media (max-width: 559px){
+    .footer-scroll-top > a::before {
+        content: "";
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30.7'%3E%3Cpath fill='%23010101' d='M1.6 30.7L30 3.1l28.5 27.6 1.5-1.6L30 0 0 29.1z'/%3E%3C/svg%3E");
+    
+    }
 }
+
 
 .footer-icon-content {
     display: flex;
@@ -988,10 +1014,32 @@ aside .article-item-content {
 
 @media (max-width: 559px){
     .footer-icon-sns-list {
-        /* background-color: #000000; */
-        /* z-index: 0; */
+        background-color: #000000;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
     }
 }
+
+@media (max-width: 559px){
+    .footer-icon-sns-item {
+        display: none;
+    }
+}
+
+
+.footer-icon-sns-item-mobile {
+    display: none;
+}
+
+@media (max-width: 559px){
+    .footer-icon-sns-item-mobile {
+        display: block;
+        margin: 0 15px;
+        
+    }
+}
+
 
 .footer-icon-sns-item {
     width: 100%;
