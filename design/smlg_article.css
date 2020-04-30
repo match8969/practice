@@ -844,6 +844,12 @@ aside .article-item-content {
     background-color: #000000;
 }
 
+@media (max-width: 559px){
+    .article-pickup-select {
+        display: none;
+    }
+}
+
 
 
 /* Stickyがきかない */
