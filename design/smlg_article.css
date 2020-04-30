@@ -355,6 +355,32 @@ p {
 
 .pagenation-list {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagenation-list > .active {
+    background-color: #000000;
+}
+
+.pagenation-item {
+    line-height: center;
+}
+
+.pagenation-item.active > a {
+    color: #ffffff;
+}
+
+.pagenation-item {
+    border: 1px solid #000000;
+    padding: 1em;
+    width: 3em;
+    height: 3em;
+    margin: 0 2em 0 0;
+}
+
+.pagenation-item:last-child {
+    margin: 0;
 }
 
 .sns-list {
