@@ -975,15 +975,22 @@ aside .article-item-content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2em;
+        padding: 0 0 1em 0;
     }
 }
 
 @media (max-width: 559px){
     .footer-scroll-top > a::before {
         content: "";
+        display: flex;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30.7'%3E%3Cpath fill='%23010101' d='M1.6 30.7L30 3.1l28.5 27.6 1.5-1.6L30 0 0 29.1z'/%3E%3C/svg%3E");
-    
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 10px;
+        margin: 1em auto;
+
+        
     }
 }
 
