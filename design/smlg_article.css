@@ -1161,8 +1161,12 @@ aside .article-item-content {
 
 @media (max-width: 559px){
     .footer-company-item {
-        border: solid 1px #000000;
+        /* border: solid 1px #000000; */
+        border-bottom: solid 1px #000000;
         padding: 1em 0 1em 2em;
+    }
+    .footer-company-item:nth-child(odd) {
+        border-right: solid 1px #000000;
     }
 }
 
@@ -1199,6 +1203,7 @@ aside .article-item-content {
         justify-content: center;
         align-items: center;
         background-color: #f1f1f1;
+        padding: 20px 0;
     }
 }
 
