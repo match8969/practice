@@ -66,3 +66,37 @@ a {
 .header-nav-category {
     display: flex;
 }
+
+/* MAIN */
+
+.main-space {
+    background-color: rgb(242, 242, 242);
+    height: 40px;
+    width: 100%;
+}
+
+.new-article-list {
+    display: flex;
+}
+
+.popular-article-list {
+    display: flex;
+}
+
+.feature-article-list {
+    display: flex;
+}
+
+.feature-article-item {
+    flex-basis: 50%;
+}
+
+.feature-article-child-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature-article-child-item {
+    /* flex-basis: 25%; */
+    flex-basis: 50%;
+}
