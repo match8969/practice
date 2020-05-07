@@ -46,6 +46,7 @@ a {
     justify-content: space-between;
 }
 
+
 .header-title {
     /* TODO: ロゴのサイズ調整 */
     min-width: 100px;
@@ -54,6 +55,10 @@ a {
 /* .header-content {
     border: 1px solid rgb(242, 242, 242);
 } */
+
+.header-edition-nav {
+    display: none;
+}
 
 .header-nav {
     border-top: 1px solid rgb(242, 242, 242);
@@ -99,4 +104,18 @@ a {
 .feature-article-child-item {
     /* flex-basis: 25%; */
     flex-basis: 50%;
+}
+
+/* FOOTER */
+
+.footer-edition-nav {
+    display: flex;
+}
+
+.footer-sns-list {
+    display: flex;
+}
+
+.footer-company-list {
+    display: flex;
 }
