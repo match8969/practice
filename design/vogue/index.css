@@ -107,15 +107,42 @@ a {
 }
 
 /* FOOTER */
+footer {
+    color: #ffffff;
+    background-color: rgb(45, 46, 47);
+
+}
 
 .footer-edition-nav {
     display: flex;
+    background-color: rgb(238, 0, 0);
+}
+
+.footer-brand {
+    display: flex;
+    min-height: 160px;
+    height: auto;
+    background-color: rgb(36, 37, 38);
+    
 }
 
 .footer-sns-list {
     display: flex;
 }
 
+.footer-sns-item {
+    
+}
+
+.footer-sns-item  > a > svg {
+    color: #ffffff;
+    width: 30px;
+}
+
 .footer-company-list {
     display: flex;
+}
+
+.footer-copyrignt {
+    color: rgb(202, 204, 206);
 }
