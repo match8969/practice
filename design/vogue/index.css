@@ -1,0 +1,68 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box; outline: none;}
+    li{list-style: none;}
+    img,iframe{border: 0;}
+    header,article,section,footer,main,nav,aside{display: block;
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+body {
+    font-family: "游ゴシック",YuGothic,Verdana,Roboto,"Droid Sans","メイリオ",Meiryo,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック",sans-serif;
+}
+
+a {
+    text-decoration: none;
+    /* color: #000000; */
+    color: rgb(45, 46, 47);
+}
+
+
+/* COMMMON */
+.container {
+    /* sideの余白 */
+    padding: 0 50px;
+}
+
+
+/* HEADER */
+.header-container {
+
+}
+
+.header-top {
+    display: flex;
+    
+}
+
+.header-top-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-title {
+    /* TODO: ロゴのサイズ調整 */
+    min-width: 100px;
+}
+
+/* .header-content {
+    border: 1px solid rgb(242, 242, 242);
+} */
+
+.header-nav {
+    border-top: 1px solid rgb(242, 242, 242);
+}
+
+.header-nav-container {
+    display: flex;
+}
+
+.header-nav-category {
+    display: flex;
+}
