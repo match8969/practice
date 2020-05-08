@@ -13,7 +13,10 @@ html {
 }
 
 body {
-    font-family: "游ゴシック",YuGothic,Verdana,Roboto,"Droid Sans","メイリオ",Meiryo,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック",sans-serif;
+    /* font-family: "游ゴシック",YuGothic,Verdana,Roboto,"Droid Sans","メイリオ",Meiryo,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック",sans-serif; */
+    font-family: YakuHanJP, "Yu Gothic", YuGothic, "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
+
+    letter-spacing: 2px;
 }
 
 a {
@@ -41,6 +44,8 @@ a {
 }
 
 .header-top-container{
+    border-top: 20px solid #000000;
+    padding-top: 60px;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -48,13 +53,18 @@ a {
 
 
 .header-title {
-    /* TODO: ロゴのサイズ調整 */
-    min-width: 100px;
+    /* ロゴのサイズ */
+    min-width: 300px;
 }
 
-/* .header-content {
-    border: 1px solid rgb(242, 242, 242);
-} */
+.header-edit {
+    display: flex;
+}
+
+.header-edit > p {
+    color: rgb(156, 158, 160);
+}
+
 
 .header-edition-nav {
     display: none;
@@ -62,14 +72,47 @@ a {
 
 .header-nav {
     border-top: 1px solid rgb(242, 242, 242);
+    border-bottom: 1px solid rgb(202, 204, 206);
+    
 }
 
 .header-nav-container {
     display: flex;
+    justify-content: space-between;
 }
 
-.header-nav-category {
+.header-nav-container > *:not(:first-child){
+    border-left: 1px solid rgb(242, 242, 242);
+}
+.header-content {
+    font-size: 0.75rem;
+    padding: 1.5em 0;
+    font-weight: bold;
+}
+
+.header-nav-category-list {
     display: flex;
+}
+
+.header-nav-category-item {
+    margin-right: 2em;
+}
+
+.header-nav-right-list {
+    display: flex;
+    
+}
+
+
+.header-nav-members {
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav-modal-open {
+    padding: 0 1em;
 }
 
 /* MAIN */
