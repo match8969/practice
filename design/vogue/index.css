@@ -27,6 +27,9 @@ a {
 
 button {
     border-style: none;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #ffffff;
 }
 
 /* COMMMON */
@@ -65,10 +68,12 @@ button {
 
 .header-edit > p {
     color: rgb(156, 158, 160);
+    margin-right: 1em;
 }
 
 .header-edit > button {
     color: #ee0000;
+
 }
 
 .header-edition-nav {
