@@ -187,12 +187,29 @@ MAIN
 
 .article-item-content {
     order: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-item-image {
     order: 1;
 }
 
+.artilce-title {
+    order: 2;
+}
+
+.artilce-category {
+    order: 1;
+}
+
+.artilce-author {
+    order: 3;
+}
+
+.article-time {
+    order: 4;
+}
 
 /* NEW ARTICLE */
 .new-article-list {
