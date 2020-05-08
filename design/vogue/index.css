@@ -13,9 +13,8 @@ html {
 }
 
 body {
-    /* font-family: "游ゴシック",YuGothic,Verdana,Roboto,"Droid Sans","メイリオ",Meiryo,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック",sans-serif; */
     font-family: YakuHanJP, "Yu Gothic", YuGothic, "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
-
+    /* TODO: 適応したくない箇所の調整必要  */
     letter-spacing: 2px;
 }
 
@@ -38,8 +37,12 @@ button {
     padding: 0 50px;
 }
 
+/* 
+============================== 
+HEADER
+==============================
+*/
 
-/* HEADER */
 .header-container {
 
 }
@@ -90,9 +93,10 @@ button {
     justify-content: space-between;
 }
 
-.header-nav-container > *:not(:first-child){
-    border-left: 1px solid rgb(242, 242, 242);
+.header-nav-container > *:not(:last-child){
+    border-right: 1px solid rgb(242, 242, 242);
 }
+
 .header-content {
     font-size: 0.75rem;
     padding: 1.5em 0;
@@ -117,6 +121,11 @@ button {
 .header-nav-right-list {
     display: flex;
     align-items: center;
+    border-right: 1px solid rgb(242, 242, 242);
+}
+
+.header-nav-right-list > *:not(:last-child) {
+    border-right: 1px solid rgb(242, 242, 242);
 }
 
 .header-nav-members {
@@ -127,16 +136,38 @@ button {
 }
 
 .header-nav-modal-open {
-    border-left: 1px solid rgb(242, 242, 242);
-    border-right: 1px solid rgb(242, 242, 242);
+    padding: 1em 1em;
+    height: auto;
 }
 
-/* MAIN */
+/* 
+============================== 
+MAIN
+==============================
+*/
 
 .main-space {
     background-color: rgb(242, 242, 242);
     height: 40px;
     width: 100%;
+}
+
+.main-section {
+
+}
+
+.main-section-head {
+    display: flex;
+}
+
+.main-section-head > h2 {
+    font-weight: normal;
+    /* margin-bottom: ; */
+    border-top: 0.5rem solid #000000;
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    /* max-width: ; */
+    margin-right: auto;
 }
 
 .new-article-list {
@@ -165,7 +196,11 @@ button {
     flex-basis: 50%;
 }
 
-/* FOOTER */
+/* 
+============================== 
+FOOTER
+==============================
+*/
 footer {
     color: #ffffff;
     background-color: rgb(45, 46, 47);
