@@ -15,7 +15,7 @@ html {
 body {
     font-family: YakuHanJP, "Yu Gothic", YuGothic, "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
     /* TODO: 適応したくない箇所の調整必要  */
-    letter-spacing: 2px;
+    letter-spacing: 0.5em; /* OR rem */ 
 }
 
 a {
