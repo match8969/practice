@@ -35,6 +35,8 @@ button {
 .container {
     /* sideの余白 */
     padding: 0 50px;
+
+    /* margin: 0 50px; */
 }
 
 /* 
@@ -153,7 +155,8 @@ MAIN
 }
 
 .main-section {
-
+    margin-bottom: 5rem;
+    border-top: 1px solid #000000;
 }
 
 .main-section-head {
@@ -170,9 +173,25 @@ MAIN
     margin-right: auto;
 }
 
+
+/* 記事表示共通 */
+.article-item > a {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-item-content {
+    order: 2;
+}
+
+.article-item-image {
+    order: 1;
+}
+
 .new-article-list {
     display: flex;
 }
+
 
 .popular-article-list {
     display: flex;
