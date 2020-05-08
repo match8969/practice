@@ -99,9 +99,15 @@ button {
     font-weight: bold;
 }
 
+.header-nav-left-list {
+    display: flex;
+    align-items: center;
+}
+
 .header-nav-category-list {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .header-nav-category-item {
@@ -110,6 +116,7 @@ button {
 
 .header-nav-right-list {
     display: flex;
+    align-items: center;
 }
 
 .header-nav-members {
@@ -120,7 +127,6 @@ button {
 }
 
 .header-nav-modal-open {
-    padding: 0 1em;
     border-left: 1px solid rgb(242, 242, 242);
     border-right: 1px solid rgb(242, 242, 242);
 }
