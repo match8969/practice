@@ -344,12 +344,31 @@ footer {
 }
 
 .footer-sns-item {
-    padding: 1.2em;
+    padding: 0.5em;
+    margin-right: 1em;
+    width: 4em;
+    height: auto;
+}
+
+.footer-sns-item > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+.footer-sns-item > a:hover {
+    border-color: rgb(238, 0, 0);
 }
 
 .footer-sns-item  > a > svg {
     color: #ffffff;
     width: 30px;
+}
+
+.footer-sns-item  > a > svg:hover {
+    color: rgb(238, 0, 0);
 }
 
 .footer-company {
