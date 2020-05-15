@@ -15,7 +15,7 @@ html {
 body {
     font-family: YakuHanJP, "Yu Gothic", YuGothic, "Hiragino Sans", "Noto Sans CJK JP", sans-serif;
     /* TODO: 適応したくない箇所の調整必要  */
-    letter-spacing: 0.5em; /* OR rem */ 
+    letter-spacing: 0.05em; /* OR rem */ 
 }
 
 a {
@@ -34,7 +34,7 @@ button {
 /* COMMMON */
 .container {
     /* sideの余白 */
-    padding: 0 50px;
+    padding: 0 60px;
 
     /* margin: 0 50px; */
 }
@@ -67,16 +67,16 @@ HEADER
     min-width: 300px;
 }
 
-.header-edit {
+.header-edition {
     display: flex;
 }
 
-.header-edit > p {
+.header-edition > p {
     color: rgb(156, 158, 160);
     margin-right: 1em;
 }
 
-.header-edit > button {
+.header-edition > button {
     color: #ee0000;
 
 }
@@ -250,9 +250,52 @@ footer {
 
 }
 
+.footer-edition {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-edition > * {
+    padding: 1em;
+}
+
+.footer-edition > p {
+    color: rgb(156, 158, 160);
+    margin-right: 1em;
+}
+
+
+.footer-edition > button {
+    background-color: #ee0000;
+    color: #ffffff;
+    /* margin-right: 50px; containerの幅と同じに設定 */
+
+}
+
 .footer-edition-nav {
     display: flex;
     background-color: rgb(238, 0, 0);
+}
+
+.footer-edition-company {
+    padding: 1em 3em;
+}
+
+.footer-edition-country {
+    padding: 1em 3em;
+}
+
+.footer-edition-list {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    max-width: 20px;
+    max-height: 500px;
+}
+
+.footer-edition-list > li {
+    margin-right: 5em;
+    padding: 0.5em 0;
 }
 
 .footer-brand {
@@ -260,10 +303,13 @@ footer {
     min-height: 160px;
     height: auto;
     background-color: rgb(36, 37, 38);
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .footer-sns-list {
     display: flex;
+    /* margin: ; */
 }
 
 .footer-sns-item {
