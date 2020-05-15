@@ -278,7 +278,7 @@ footer {
 }
 
 .footer-edition-company {
-    padding: 1em 3em;
+    /* padding: 1em 3em; */
 }
 
 .footer-edition-country {
@@ -313,6 +313,7 @@ footer {
 }
 
 .footer-sns-item {
+    padding: 1.2em;
     
 }
 
@@ -321,10 +322,28 @@ footer {
     width: 30px;
 }
 
+.footer-company {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-company-title {
+    padding: 1.5em;
+}
+
 .footer-company-list {
     display: flex;
+    justify-content: center;
+}
+
+.footer-company-list > li {
+    padding: 1.5em 1em;
+    /* color: rgb(156, 158, 160); */
+    color: rgb(202, 204, 206);
 }
 
 .footer-copyrignt {
     color: rgb(202, 204, 206);
+    text-align: center;
 }
