@@ -179,7 +179,21 @@ MAIN
 
 
 /* 記事表示共通 */
+.article-list {
+
+}
+
+.article-item {
+    /* width: ; */
+}
+
+.article-item:not(:first-of-type) {
+    padding-left: 1em;
+}
+
 .article-item > a {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 }
@@ -190,6 +204,9 @@ MAIN
 }
 
 .article-item-content {
+    /* witdhがキープされなくなる。 左つめになる */
+    /* position: absolute; */
+
     order: 2;
     display: flex;
     flex-direction: column;
@@ -197,19 +214,26 @@ MAIN
 
 .article-item-image {
     order: 1;
-}
-
-.article-item-image > img {
-    position: relative;
-}
-
-/* TODO: WIP 赤いのにならない。*/
-.article-item-image > img::before {
-    content: "ggggggggggggggggggggggggg";
-    position: absolute;
     width: 100%;
     height: 100%;
+    
+    opacity: 1;
+}
+
+.article-item-image > figure {
     background-color: rgb(238, 0, 0);
+    padding: 0;
+}
+
+.article-item-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    margin: 0;
+}
+
+.article-item-image img:hover {
+    opacity: 0.2;
 }
 
 .artilce-title {
@@ -222,6 +246,9 @@ MAIN
 
 .artilce-author {
     order: 3;
+    /* position: relative; */
+    border-top: solid 0.5em rgb(184, 154, 106);
+    max-width: 3em;
 }
 
 .article-time {
