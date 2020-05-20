@@ -278,6 +278,15 @@ MAIN
     flex-wrap: wrap;
 }
 
+/* feature記事の余白削除 */
+.feature-article-child-list .article-item:first-child{
+    padding-left: 1em;
+}
+
+.pickup-section>.article-item {
+    padding-left: 0;
+}
+
 .feature-article-child-item {
     /* flex-basis: 25%; */
     flex-basis: 50%;
