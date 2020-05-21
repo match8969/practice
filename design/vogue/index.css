@@ -216,7 +216,6 @@ MAIN
     order: 1;
     width: 100%;
     height: 100%;
-    
     opacity: 1;
 }
 
@@ -253,6 +252,30 @@ MAIN
 
 .article-time {
     order: 4;
+}
+
+.left-side-article {
+
+}
+
+.left-side-article > a > .article-item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 2em;
+}
+
+.left-side-article > a > .article-item-content > .artilce-title {
+    font-size: 3em;
+}
+
+.left-side-article > a > .article-item-content > .artilce-author {
+    border-top: solid 0.5em #ffffff;
+}
+
+.left-side-article > a > .article-item-image{
+    
 }
 
 /* NEW ARTICLE */
