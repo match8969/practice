@@ -210,6 +210,7 @@ MAIN
     order: 2;
     display: flex;
     flex-direction: column;
+    padding: 1em;
 }
 
 .article-item-image {
@@ -276,6 +277,21 @@ MAIN
 
 .left-side-article > a > .article-item-image{
     
+}
+
+.center-article {
+    
+}
+
+.center-article > a > .article-item-content{
+    max-width: 60vw;
+    margin: 0 auto;
+    border-left: solid 1px #000000;
+    padding: 2em;
+}
+
+.center-article > a > .article-item-content > .artilce-title {
+    font-size: 2em;
 }
 
 /* NEW ARTICLE */
