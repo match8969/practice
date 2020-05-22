@@ -206,12 +206,23 @@ MAIN
 .article-item-content {
     /* witdhがキープされなくなる。 左つめになる */
     /* position: absolute; */
-
     order: 2;
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 1em 0 0 1em;
+
+    background-color: #ffffff;
+    margin-left: 1em;
+    transform: translateY(-3rem);
 }
+
+.left-side-article .article-item-content, .center-article .article-item-content {
+    background-color: transparent;
+    margin-left: 0;
+    transform: none;
+}
+
+
 
 .article-item-image {
     order: 1;
