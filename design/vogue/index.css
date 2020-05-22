@@ -199,8 +199,7 @@ MAIN
 }
 
 .article-item h3{
-    font-weight: normal;
-
+    font-family: serif;
 }
 
 .article-item-content {
@@ -214,6 +213,7 @@ MAIN
     background-color: #ffffff;
     margin-left: 1em;
     transform: translateY(-3rem);
+    z-index: 1;
 }
 
 .left-side-article .article-item-content, .center-article .article-item-content {
@@ -233,10 +233,9 @@ MAIN
 
 /*
 めも : 
+・
 ・object-fit(IEは非適用)
-
 ・ .article-item > a:hover > .article-item-image でhoverで赤
-
 */
 
 .article-item-image img {
@@ -248,26 +247,32 @@ MAIN
 }
 
 .article-item > a:hover > .article-item-image img{
-    opacity: 0.2;
+    opacity: 0.3;
+    
+    /* hover時に画像自体をgrayにする */
+    filter: grayscale(100%);
 }
 
 .article-item > a:hover > .article-item-image > figure {
     background-color: rgb(238, 0, 0);
 }
 
-.artilce-title {
+.article-title {
     order: 2;
+    padding: 0.5em 0 1em 0;
 }
 
-.artilce-category {
+.article-category {
     order: 1;
 }
 
-.artilce-author {
+.article-author {
     order: 3;
     /* position: relative; */
     border-top: solid 0.5em rgb(184, 154, 106);
     max-width: 3em;
+    padding-top: 0.5em;
+    white-space: nowrap; /* 改行させない */
 }
 
 .article-time {
@@ -286,11 +291,11 @@ MAIN
     padding: 2em;
 }
 
-.left-side-article > a > .article-item-content > .artilce-title {
+.left-side-article > a > .article-item-content > .article-title {
     font-size: 3em;
 }
 
-.left-side-article > a > .article-item-content > .artilce-author {
+.left-side-article > a > .article-item-content > .article-author {
     border-top: solid 0.5em #ffffff;
 }
 
@@ -309,7 +314,7 @@ MAIN
     padding: 2em;
 }
 
-.center-article > a > .article-item-content > .artilce-title {
+.center-article > a > .article-item-content > .article-title {
     font-size: 2em;
 }
 
