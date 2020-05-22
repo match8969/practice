@@ -307,25 +307,21 @@ MAIN
 }
 
 .left-side-article > a {
-    border: solid 1px #000000;  
+    /* 確認用 */
+    /* border: solid 1px #000000;   */ 
     position: sticky;
     top: 0;
     height: 100vh;
 }
 
 .left-side-article > a > .article-item-content {
-    /* position: absolute;
-    bottom: 0;
-    left: 0; */
     color: white;
-    transform: translateY(-120%);
     transform: translateY(-100%);
-    /* padding: 2em; */
+    padding: 2em;
 }
 
 .left-side-article > a:hover > .article-item-content {
     color: #ffffff;
-
 }
 
 .left-side-article > a > .article-item-content > .article-title {
