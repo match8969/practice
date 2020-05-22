@@ -266,12 +266,14 @@ MAIN
 
 .article-item > a:hover > .article-item-image > figure {
     background-color: rgb(238, 0, 0);
-    /* TODO: 下が少しはみ出る  */
     max-height: 100%;
     height: 100%;
-    /* height: auto%; */
-
     padding: 0;
+}
+
+.article-item > a:hover > .article-item-content {
+    /* TODO: 文字おを薄くする */
+    color: gray;
 }
 
 .article-title {
@@ -321,6 +323,11 @@ MAIN
     /* padding: 2em; */
 }
 
+.left-side-article > a:hover > .article-item-content {
+    color: #ffffff;
+
+}
+
 .left-side-article > a > .article-item-content > .article-title {
     font-size: 3em;
 }
@@ -330,10 +337,6 @@ MAIN
 }
 
 .left-side-article > a > .article-item-image{
-
-    /* position: sticky;
-    top: 0; */
-    /* height: 100vh; */
 }
 
 .center-article {
