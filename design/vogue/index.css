@@ -454,6 +454,12 @@ MAIN
     white-space: nowrap; /* 改行させない */
 }
 
+@media (max-width: 559px){
+    .article-author {
+        border-top: none;
+    }
+}
+
 .article-time {
     order: 4;
 }
@@ -471,6 +477,7 @@ MAIN
     .left-side-article > a {
         position: static;
         height: auto;
+        flex-direction: column;
     }
 }
 
@@ -573,14 +580,20 @@ MAIN
     padding-left: 1em;
 }
 
-@media (max-width: 559px){
+/* @media (max-width: 559px){
     .feature-article-child-list .article-item:first-child{
         padding-left: 1em;
     }
-}
+} */
 
 .pickup-section>.article-item {
     padding-left: 0;
+}
+
+@media (max-width: 559px){
+    .pickup-section>.article-item {
+        padding-left: 1em;
+    }
 }
 
 .feature-article-child-item {
