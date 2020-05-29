@@ -81,21 +81,48 @@ HEADER
     position: relative;
 }
 
+.header-edition.active {
+    background-color: rgb(238, 0, 0);
+}
+
 .header-edition-title {
     display: flex;
+    padding: 1em 1.5em;
 }
+
+.header-edition-title:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+.header-edition.active.active .header-edition-title:hover {
+    background-color: transparent;
+}    
 
 .header-edition-title > p {
     color: rgb(156, 158, 160);
     margin-right: 1em;
 }
 
-.header-edition > button {
-    color: #ee0000;
+.header-edition.active .header-edition-title > p {
+    color: #ffffff;
+    
+}
 
+.header-edition button {
+    color: #ee0000;
+    background-color: transparent;
+}
+
+.header-edition.active button {
+    color: #ffffff;
 }
 
 .header-edition-nav {
+    display: none;
+}
+
+.header-edition-nav.active {
+    display: block;
     position: absolute;
     width: 70vw;
     left: calc(100% - 70vw);
