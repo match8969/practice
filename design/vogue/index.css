@@ -636,6 +636,13 @@ footer {
     padding: 1.5em;
 }
 
+@media (max-width: 559px){
+    .footer-edition-nav {
+        display: none;
+    }
+}
+
+
 .footer-edition-company {
     display: flex;
     justify-content: center;
@@ -690,6 +697,14 @@ footer {
     line-height: 130%;
     max-height: 0.8em;
     z-index: 1;
+}
+
+@media (max-width: 559px){
+    .footer-brand::before {
+        /* ★ TODO どうやって文字の途中でけす? */
+        content: "Sma";
+        max-width: 100%;
+    }
 }
 
 .footer-sns-list {
