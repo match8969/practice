@@ -192,6 +192,10 @@ HEADER
     margin-right: 2em;
 }
 
+.header-nav-category-item > a:hover {
+    color: rgb(238, 0, 0);
+}
+
 .header-nav-right-list {
     display: flex;
     align-items: center;
@@ -209,9 +213,18 @@ HEADER
     align-items: center;
 }
 
+.header-nav-members > a:hover {
+    color: rgb(238, 0, 0);
+}
+
 .header-nav-modal-open {
     padding: 1em 1em;
     height: auto;
+}
+
+.header-nav-modal-open:hover {
+    color: #ffffff;
+    background-color: rgb(238, 0, 0);
 }
 
 /* 
