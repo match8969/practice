@@ -26,7 +26,6 @@ body {
 
 a {
     text-decoration: none;
-    /* color: #000000; */
     color: rgb(45, 46, 47);
 }
 
@@ -41,8 +40,6 @@ button {
 .container {
     /* sideの余白 */
     padding: 0 60px;
-
-    /* margin: 0 50px; */
 }
 
 .font-serif {
@@ -250,11 +247,9 @@ MAIN
 
 .main-section-head > h2 {
     font-weight: normal;
-    /* margin-bottom: ; */
     border-top: 0.5rem solid #000000;
     padding-top: 0.5rem;
     padding-bottom: 3rem;
-    /* max-width: ; */
     margin-right: auto;
 }
 
@@ -265,7 +260,6 @@ MAIN
 }
 
 .article-item {
-    /* width: ; */
 }
 
 .article-item:not(:first-of-type) {
@@ -284,8 +278,6 @@ MAIN
 }
 
 .article-item-content {
-    /* witdhがキープされなくなる。 左つめになる */
-    /* position: absolute; */
     order: 2;
     display: flex;
     flex-direction: column;
@@ -307,7 +299,6 @@ MAIN
     order: 1;
     width: 100%;
     height: 100%;
-    /* height: auto; */
     opacity: 1;
 }
 
@@ -319,7 +310,6 @@ MAIN
 */
 
 .article-item > a > .article-item-image > figure {
-    /* max-height: 100%; */
     height: 100%;
 }
 
@@ -347,7 +337,6 @@ MAIN
 }
 
 .article-item > a:hover > .article-item-content {
-    /* TODO: 文字おを薄くする */
     color: gray;
 }
 
@@ -362,7 +351,6 @@ MAIN
 
 .article-author {
     order: 3;
-    /* position: relative; */
     border-top: solid 0.5em rgb(184, 154, 106);
     max-width: 3em;
     padding-top: 0.5em;
@@ -374,16 +362,9 @@ MAIN
 }
 
 .left-side-article {
-    /* WIP */
-    /* border: solid 1px #000000;  
-    position: sticky;
-    top: 0;
-    height: 100vh; */
 }
 
 .left-side-article > a {
-    /* 確認用 */
-    /* border: solid 1px #000000;   */ 
     position: sticky;
     top: 0;
     height: 100vh;
@@ -458,7 +439,6 @@ MAIN
 }
 
 .feature-article-child-item {
-    /* flex-basis: 25%; */
     flex-basis: 50%;
 }
 
@@ -490,8 +470,6 @@ footer {
 .footer-edition > button {
     background-color: #ee0000;
     color: #ffffff;
-    /* margin-right: 50px; containerの幅と同じに設定 */
-
 }
 
 .footer-edition-nav {
@@ -507,7 +485,6 @@ footer {
 }
 
 .footer-edition-country {
-    /* padding: 1em 3em; */
     margin: 0 auto;
     flex-basis: 70%;
 }
@@ -551,7 +528,6 @@ footer {
     top: 0;
     left: 0;
     color: rgb(45, 46, 47);
-    /* padding: 0 0 0 1em; */
     font-size: 10em;
     line-height: 130%;
     max-height: 0.8em;
@@ -560,7 +536,6 @@ footer {
 
 .footer-sns-list {
     display: flex;
-    /* margin: ; */
 }
 
 .footer-sns-item {
@@ -598,7 +573,7 @@ footer {
 }
 
 .footer-company-title {
-    padding: 1.5em;
+    padding: 2em;
 }
 
 .footer-company-list {
@@ -608,7 +583,6 @@ footer {
 
 .footer-company-list > li {
     padding: 1.5em 1em;
-    /* color: rgb(156, 158, 160); */
     color: rgb(202, 204, 206);
 }
 
