@@ -2,21 +2,146 @@
 @import url("header.css");
 @import url("footer.css");
 
+
+.article-title {
+    order: 2;
+    padding: 0.5em 0 1em 0;
+    font-size: 2.5rem;
+}
+
+.article-category {
+    order: 1;
+}
+
+.article-author {
+    order: 3;
+    border-top: solid 0.5em rgb(184, 154, 106);
+    max-width: 3em;
+    /* padding-top: 0.5em; */
+    padding: 0.5em 0;
+    white-space: nowrap; /* 改行させない */
+}
+
+.article-time {
+    order: 4;
+}
+
+.article-description {
+    order: 5;
+    padding: 2em 0;
+}
+
+.article-header-sns {
+    order: 6;
+}
+
+
 /* 
 ============================== 
 ARTICLE 
 ==============================
 */
 
+article > header {
+ border-bottom: solid 1px rgb(156, 158, 160);
+}
 
 .article-header-inner {
-    display: flex;
-    justify-content: center;
+    padding: 2em;
 }
 
 .article-header-content {
+    display: flex;
+    flex-direction: column;
 
-    flex-basis: 40%;
-    /* max-width: ; */
+    max-width: 500px; /* 検討 : サイズ */
     margin: 0 auto;
+}
+
+/* .article-header-title {
+    font-size: 3rem;
+} */
+
+.article-header-sns-list {
+    display: flex;
+}
+
+.section-container {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 800px; /* 検討: サイズ */
+    margin: 0 auto;
+    padding-top: 3em;
+    
+}
+
+.article-section {
+   display: flex;
+   flex-direction: column;
+   padding: 1em 0;
+}
+
+.article-section-title {
+    order: 1;
+}
+
+.article-section-paragraph {
+    order: 3;
+}
+
+.article-section-figure {
+    order: 2;
+    /* min-width: 100%; */
+    display: flex;
+}
+
+.article-section-figure > img {
+    position: relative;
+}
+
+.article-section-figure > p {
+    border-top: solid 0.2em rgb(184, 154, 106); 
+    max-width: 2em;
+    position: absolute;
+    left: 100px;
+    /* width: 100px; */
+    min-width: 100px;
+    /* transform: translateY(-100%); */
+    
+    
+    /* top: 100px; */
+
+    /* */
+    /* display: flex;
+    align-items: center;
+    transform: translateX(-100%); */
+
+}
+
+/* .article-section-figure > p::before {
+    content: "";
+    height: 1em;
+    width: 1em;
+    border-top: solid 0.2em rgb(184, 154, 106);
+} */
+
+.article-footer {
+    padding: 1em 0 3em 0;
+}
+
+.article-tag-list {
+    display: flex;
+
+}
+
+.article-tag-item {
+    color: #ffffff;
+    background-color: rgb(238, 0, 0);
+    padding: 0 1em;
+    margin: 1em 1em 0 0;
+    white-space: nowrap;
+
 }
