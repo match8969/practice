@@ -1,0 +1,22 @@
+@import url("common.css");
+@import url("header.css");
+@import url("footer.css");
+
+/* 
+============================== 
+ARTICLE 
+==============================
+*/
+
+
+.article-header-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.article-header-content {
+
+    flex-basis: 40%;
+    /* max-width: ; */
+    margin: 0 auto;
+}
