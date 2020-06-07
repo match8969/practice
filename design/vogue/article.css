@@ -72,7 +72,7 @@ article > header {
     flex-direction: column;
     justify-content: center;
 
-    max-width: 800px; /* 検討: サイズ */
+    max-width: 700px; /* 検討: サイズ */
     margin: 0 auto;
     padding-top: 3em;
     
@@ -86,16 +86,20 @@ article > header {
 
 .article-section-title {
     order: 1;
+    font-size: 1em;
 }
 
 .article-section-paragraph {
     order: 3;
+    padding: 1em 0;
 }
 
 .article-section-figure {
     order: 2;
     /* min-width: 100%; */
     display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 
 .article-section-figure > img {
@@ -105,11 +109,15 @@ article > header {
 .article-section-figure > p {
     border-top: solid 0.2em rgb(184, 154, 106); 
     max-width: 2em;
-    position: absolute;
-    left: 100px;
+    /* position: absolute; */
+    /* left: 100px; */
     /* width: 100px; */
     min-width: 100px;
-    /* transform: translateY(-100%); */
+    align-items: center;
+    /* padding: 0 1em; */
+    margin: 0 1em;
+    
+    /* transform: translateY(100%); */
     
     
     /* top: 100px; */
