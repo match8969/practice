@@ -129,6 +129,12 @@ article > header {
 
 }
 
+.figure-first {
+    flex-direction: row;
+    align-self: flex-start;
+    align-self: start;
+
+}
 /* .article-section-figure > p::before {
     content: "";
     height: 1em;
