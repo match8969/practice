@@ -72,7 +72,9 @@ article > header {
     flex-direction: column;
     justify-content: center;
 
-    max-width: 700px; /* 検討: サイズ */
+    /* 検討: サイズ */
+    /* header とあわせる */
+    max-width: 500px;
     margin: 0 auto;
     padding-top: 3em;
     
@@ -87,6 +89,7 @@ article > header {
 .article-section-title {
     order: 1;
     font-size: 1em;
+    padding: 1em 0;
 }
 
 .article-section-paragraph {
@@ -131,8 +134,8 @@ article > header {
 
 .figure-first {
     flex-direction: row;
-    align-self: flex-start;
-    align-self: start;
+    justify-content: flex-end;
+
 
 }
 /* .article-section-figure > p::before {
