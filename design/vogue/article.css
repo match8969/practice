@@ -66,6 +66,38 @@ article > header {
     display: flex;
 }
 
+.article-header-sns-item {
+    width: 3em;
+    height: auto;
+}
+
+.article-header-sns-item > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgb(45, 46, 47);
+    border-radius: 50%;
+}
+
+.article-header-sns-item > a:hover {
+    border-color: rgb(238, 0, 0);
+}
+
+.article-header-sns-item  > a > svg {
+    color: #000000;
+    width: 30px;
+}
+
+.article-header-sns-item > a > svg:hover {
+    color: rgb(238, 0, 0);
+}
+
+
+.article-header-sns-item:not(:last-child) {
+    margin-right: 1em;
+}
+
 .section-container {
     display: flex;
     
