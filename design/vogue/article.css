@@ -3,10 +3,18 @@
 @import url("footer.css");
 
 
+
 .article-title {
     order: 2;
     padding: 0.5em 0 1em 0;
     font-size: 2.5rem;
+}
+
+@media (max-width: 559px){
+    .article-title {
+        /* スマホのみ文字サイズかえる */
+        font-size: 1.5rem;
+    }
 }
 
 .article-category {
@@ -42,12 +50,30 @@ ARTICLE
 ==============================
 */
 
+
+.article-container {
+
+}
+
+@media (max-width: 559px){
+    .article-container {
+        padding: 0 1em;
+    }
+}
+
 article > header {
  border-bottom: solid 1px rgb(156, 158, 160);
 }
 
 .article-header-inner {
     padding: 2em;
+}
+
+@media (max-width: 559px){
+    .article-header-inner {
+        /* padding: 1em; */
+        padding: 0;
+    }
 }
 
 .article-header-content {
@@ -124,6 +150,10 @@ article > header {
     padding: 1em 0;
 }
 
+@media (max-width: 559px){
+    
+}
+
 .article-section-paragraph {
     order: 3;
     padding: 1em 0;
@@ -137,6 +167,13 @@ article > header {
     flex-direction: row-reverse;
 }
 
+
+@media (max-width: 559px){
+    .article-section-figure {
+        flex-direction: column;
+    }
+} 
+
 /* タブレット以下 */
 @media (max-width: 960px){
     .article-section-figure {
@@ -144,6 +181,8 @@ article > header {
         align-items: flex-start
     }
 }
+
+
 
 .article-section-figure > img {
     /* position: relative; */
@@ -180,15 +219,14 @@ article > header {
 .figure-first {
     flex-direction: row;
     justify-content: flex-end;
-
-
 }
-/* .article-section-figure > p::before {
-    content: "";
-    height: 1em;
-    width: 1em;
-    border-top: solid 0.2em rgb(184, 154, 106);
-} */
+
+@media (max-width: 559px){
+    .figure-first {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 .article-footer {
     padding: 1em 0 3em 0;
