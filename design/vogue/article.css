@@ -57,7 +57,8 @@ ARTICLE
 
 @media (max-width: 559px){
     .article-container {
-        padding: 0 1em;
+        padding: 1em;
+        border-top: solid 1px rgb(156, 158, 160);
     }
 }
 
@@ -71,8 +72,8 @@ article > header {
 
 @media (max-width: 559px){
     .article-header-inner {
-        /* padding: 1em; */
-        padding: 0;
+        /* padding: 0; */
+        padding: 0 0 2em 0;
     }
 }
 
@@ -134,14 +135,25 @@ article > header {
     /* header とあわせる */
     max-width: 500px;
     margin: 0 auto;
-    padding-top: 3em;
-    
+    padding-top: 3em;  
+}
+
+@media (max-width: 559px){
+    .section-container {
+        padding-top: 1em; 
+    }
 }
 
 .article-section {
    display: flex;
    flex-direction: column;
    padding: 1em 0;
+}
+
+@media (max-width: 559px){
+    .article-section {
+        padding: 0;
+    }
 }
 
 .article-section-title {
