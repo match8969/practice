@@ -1,0 +1,57 @@
+<html>
+    <div class="boxbd">
+        <div class="a"></div>
+        <div class="b"><div>
+        <div class="c"><div></div>
+
+    </div>
+
+<br />
+<h1>へへｈ</h1>
+
+    <div class="test">
+
+    </div>
+
+
+
+
+
+    <style type="text/css">
+        .boxbd{
+            width:50px;
+        }
+        .boxbd .a{
+            height:50px;
+            background:#f00;
+            border:2px solid #000;
+            border-bottom:none;
+            position:relative;
+        }
+        .boxbd .a:before{
+            content:"";
+            width:calc(100% + 4px);
+            height:20px;
+            position:absolute;
+            bottom:-20px;
+            left:-2px;
+            background:linear-gradient(to top right, transparent 50%,#000 50%, #f00 calc(50% + 2px)) top left/ 50% 100% no-repeat,
+            linear-gradient(to top left, transparent 50%,#000 50%, #f00 calc(50% + 2px)) top right / 50% 100% no-repeat;
+        }
+        .boxbd .b{
+            height:50px;
+            background:#FF0;
+            border:2px solid #000;
+            border-top:none;
+        }
+
+
+        .test {
+            height:50px;
+            background: linear-gradient(45deg, blue, red);;
+            border:2px solid #000;
+            border-top:none;
+        }
+
+    </style>
+</html>
